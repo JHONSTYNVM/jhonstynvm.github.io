@@ -1,246 +1,290 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Portafolio Estudiantil - Jhonstyn Vega</title>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
-
-
-body{
-
-    min-height:100vh;
-    background:linear-gradient(135deg,#071A52,#3B2B80,#5C6BC0);
-    color:white;
-
-}
-
-
-/* MENU */
-
-nav{
-
-    width:100%;
-    padding:25px 70px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-}
-
-
-.logo{
-
-    display:flex;
-    align-items:center;
-    gap:15px;
-
-}
-
-
-.logo img{
-
-    width:55px;
-
-}
-
-
-.logo h2{
-
-    font-size:20px;
-
-}
-
-
-
-.menu a{
-
-    color:white;
-    text-decoration:none;
-    margin-left:30px;
-    font-size:17px;
-
-}
-
-
-
-/* PORTADA */
-
-
-.container{
-
-    height:80vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-}
-
-
-.card{
-
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(15px);
-    width:600px;
-    padding:45px;
-    border-radius:30px;
-    text-align:center;
-    box-shadow:0 20px 40px rgba(0,0,0,.3);
-
-}
-
-
-
-.card h1{
-
-    font-size:40px;
-    margin-bottom:15px;
-
-}
-
-
-
-.card h3{
-
-    font-weight:400;
-    margin-bottom:20px;
-
-}
-
-
-
-.card p{
-
-    font-size:18px;
-    line-height:1.6;
-
-}
-
-
-
-.buttons{
-
-    margin-top:30px;
-
-}
-
-
-
-button{
-
-    padding:15px 30px;
-    border:none;
-    border-radius:25px;
-    margin:10px;
-    cursor:pointer;
-    font-size:16px;
-
-}
-
-
-.btn1{
-
-    background:#ffffff;
-    color:#17245f;
-
-}
-
-
-.btn2{
-
-    background:#6ee7ff;
-    color:#08205c;
-
-}
-
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Estudiantil - Jhonstyn Vega</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      background: linear-gradient(135deg, #0d1f66 0%, #3a2f8f 55%, #5f6bcf 100%);
+      color:white;
+    }
+
+    .navbar{
+      width:100%;
+      padding:22px 55px;
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items:center;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .brand img{
+      width:46px;
+      height:46px;
+      object-fit:contain;
+    }
+
+    .brand-text h2{
+      font-size:18px;
+      font-weight:700;
+      margin-bottom:3px;
+      letter-spacing:0.3px;
+    }
+
+    .brand-text p{
+      font-size:12px;
+      color:#d8dcff;
+      line-height:1.4;
+    }
+
+    .menu{
+      display:flex;
+      justify-content:center;
+      gap:34px;
+    }
+
+    .menu a{
+      text-decoration:none;
+      color:white;
+      font-size:16px;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    .menu a:hover{
+      color:#9ee8ff;
+    }
+
+    .right-space{
+      display:flex;
+      justify-content:flex-end;
+    }
+
+    .hero{
+      min-height: calc(100vh - 95px);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px 20px 70px;
+    }
+
+    .hero-card{
+      width:560px;
+      max-width:95%;
+      background: rgba(140, 129, 205, 0.36);
+      border-radius:28px;
+      padding:48px 45px;
+      text-align:center;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-logo{
+      width:135px;
+      height:135px;
+      object-fit:contain;
+      margin-bottom:22px;
+    }
+
+    .info-line{
+      font-size:19px;
+      font-weight:500;
+      margin-bottom:10px;
+      line-height:1.5;
+    }
+
+    .portfolio-line{
+      margin-top:14px;
+      font-size:18px;
+      font-weight:600;
+      line-height:1.6;
+      color:#f5f7ff;
+    }
+
+    .section{
+      width:90%;
+      max-width:1100px;
+      margin:0 auto 50px;
+      background:rgba(255,255,255,0.10);
+      border-radius:22px;
+      padding:30px;
+      backdrop-filter: blur(6px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.18);
+    }
+
+    .section h3{
+      margin-bottom:18px;
+      font-size:24px;
+    }
+
+    .about-box{
+      line-height:1.8;
+      font-size:17px;
+      color:#eef1ff;
+    }
+
+    .dashboard-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+      margin-top:15px;
+    }
+
+    .course-card{
+      background:rgba(255,255,255,0.12);
+      border-radius:18px;
+      padding:22px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .course-card h4{
+      font-size:20px;
+      margin-bottom:10px;
+    }
+
+    .course-card p{
+      font-size:15px;
+      line-height:1.6;
+      color:#e8ebff;
+    }
+
+    .course-btn{
+      display:inline-block;
+      margin-top:15px;
+      padding:10px 18px;
+      background:#74dcff;
+      color:#0c2166;
+      text-decoration:none;
+      border-radius:18px;
+      font-weight:600;
+    }
+
+    @media (max-width: 900px){
+      .navbar{
+        grid-template-columns:1fr;
+        gap:18px;
+        text-align:center;
+      }
+
+      .brand{
+        justify-content:center;
+      }
+
+      .menu{
+        justify-content:center;
+        flex-wrap:wrap;
+      }
+
+      .right-space{
+        display:none;
+      }
+    }
+
+    @media (max-width: 600px){
+      .hero-card{
+        padding:35px 22px;
+      }
+
+      .info-line{
+        font-size:17px;
+      }
+
+      .portfolio-line{
+        font-size:16px;
+      }
+
+      .brand-text h2{
+        font-size:16px;
+      }
+
+      .menu a{
+        font-size:15px;
+      }
+    }
+  </style>
 </head>
-
-
 <body>
 
+  <header class="navbar">
+    <div class="brand">
+      <img src="logo-upla.png" alt="Logo UPLA">
+      <div class="brand-text">
+        <h2>PORTAFOLIO ESTUDIANTIL</h2>
+        <p>Taller de Desarrollo de Aplicaciones I</p>
+        <p>Algoritmos y Estructura de Datos</p>
+      </div>
+    </div>
 
-<nav>
+    <nav class="menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#dashboard">Dashboard</a>
+    </nav>
 
+    <div class="right-space"></div>
+  </header>
 
-<div class="logo">
+  <main class="hero" id="inicio">
+    <div class="hero-card">
+      <img src="logo-upla.png" alt="Logo UPLA grande" class="hero-logo">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Escudo_UPLA.png/240px-Escudo_UPLA.png">
+      <p class="info-line">Jhonstyn Yeray Vega Muñoz</p>
+      <p class="info-line">Ingeniería de Sistemas y Computación</p>
+      <p class="info-line">IV Ciclo</p>
+      <p class="info-line">Universidad Peruana Los Andes</p>
 
-<h2>PORTAFOLIO ESTUDIANTIL</h2>
+      <p class="portfolio-line">
+        PORTAFOLIO ACADÉMICO PARA LOS CURSOS DE TALLER DE DESARROLLO DE APLICACIONES I
+      </p>
 
-</div>
+      <p class="portfolio-line">
+        Y ALGORITMOS Y ESTRUCTURA DE DATOS
+      </p>
+    </div>
+  </main>
 
+  <section class="section" id="sobre-mi">
+    <h3>Sobre mí</h3>
+    <div class="about-box">
+      <p><strong>Nombre:</strong> Jhonstyn Yeray Vega Muñoz</p>
+      <p><strong>Carrera:</strong> Ingeniería de Sistemas y Computación</p>
+      <p><strong>Ciclo actual:</strong> IV Ciclo</p>
+      <p><strong>Universidad:</strong> Universidad Peruana Los Andes - UPLA</p>
+      <p><strong>Descripción:</strong> Estudiante universitario en formación, con interés en el desarrollo de software, la lógica de programación y la construcción de proyectos académicos y web.</p>
+    </div>
+  </section>
 
-<div class="menu">
+  <section class="section" id="dashboard">
+    <h3>Dashboard</h3>
+    <div class="dashboard-grid">
+      <div class="course-card">
+        <h4>Taller de Desarrollo de Aplicaciones I</h4>
+        <p>Aquí se mostrarán tus trabajos, prácticas, avances y proyectos del curso.</p>
+        <a href="#" class="course-btn">Ver curso</a>
+      </div>
 
-<a href="#">Inicio</a>
-<a href="#">Sobre mí</a>
-<a href="#">Dashboard</a>
-
-</div>
-
-
-</nav>
-
-
-
-<section class="container">
-
-
-<div class="card">
-
-
-<h1>Jhonstyn Yeray Vega Muñoz</h1>
-
-
-<h3>
-Ingeniería de Sistemas y Computación
-</h3>
-
-
-<p>
-Universidad Peruana Los Andes<br>
-IV Ciclo<br>
-Portafolio académico y profesional
-</p>
-
-
-<div class="buttons">
-
-<button class="btn1">
-Sobre mí
-</button>
-
-
-<button class="btn2">
-Dashboard
-</button>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
+      <div class="course-card">
+        <h4>Algoritmos y Estructura de Datos</h4>
+        <p>Aquí se mostrarán tus ejercicios, prácticas y evidencias del curso.</p>
+        <a href="#" class="course-btn">Ver curso</a>
+      </div>
+    </div>
+  </section>
 
 </body>
-
-
 </html>
