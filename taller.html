@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Taller de Desarrollo de Aplicaciones I</title>
+
+
+<style>
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+
+
+body{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(120deg,#101b68,#4a38a8);
+
+    color:white;
+
+}
+
+
+
+/* HEADER */
+
+header{
+
+    width:100%;
+
+    padding:18px 55px;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+
+.logo img{
+
+    width:55px;
+
+}
+
+
+
+.logo h1{
+
+    font-size:24px;
+
+    font-weight:800;
+
+}
+
+
+
+.logo p{
+
+    font-size:13px;
+
+    line-height:18px;
+
+}
+
+
+
+/* MENU */
+
+
+.menu{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:55px;
+
+}
+
+
+
+.menu a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:700;
+
+}
+
+
+
+.menu a:hover{
+
+    color:#61dafb;
+
+}
+
+
+
+
+
+/* TITULO */
+
+
+.contenido{
+
+    width:85%;
+
+    margin:50px auto;
+
+    text-align:center;
+
+}
+
+
+
+h2{
+
+    font-size:40px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.descripcion{
+
+    font-size:18px;
+
+    margin-bottom:45px;
+
+}
+
+
+
+
+
+/* UNIDADES */
+
+
+.unidades{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:45px;
+
+}
+
+
+
+
+.unidad{
+
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:30px;
+
+    padding:35px;
+
+    border:1px solid rgba(255,255,255,.3);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.25);
+
+
+}
+
+
+
+.unidad:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.unidad h3{
+
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+}
+
+
+.unidad p{
+
+    margin-bottom:30px;
+
+    opacity:.9;
+
+}
+
+
+
+
+
+/* SEMANAS */
+
+
+.semanas{
+
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+
+}
+
+
+
+
+
+.semana{
+
+
+    background:rgba(255,255,255,.20);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.3);
+
+    text-align:left;
+
+
+}
+
+
+
+.semana h4{
+
+
+    font-size:20px;
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+.semana span{
+
+
+    font-size:14px;
+
+    opacity:.8;
+
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+
+.menu{
+
+display:none;
+
+}
+
+
+.unidades{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<header>
+
+
+
+<div class="logo">
+
+
+<img src="logo_upla.png">
+
+
+<div>
+
+
+<h1>
+PORTAFOLIO ESTUDIANTIL
+</h1>
+
+
+<p>
+Taller de Desarrollo de Aplicaciones I
+<br>
+Algoritmos y Estructura de Datos
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<nav class="menu">
+
+
+<a href="index.html">
+Inicio
+</a>
+
+
+<a href="sobremi.html">
+Sobre mí
+</a>
+
+
+<a href="dashboard.html">
+Dashboard
+</a>
+
+
+</nav>
+
+
+
+</header>
+
+
+
+
+
+
+
+<section class="contenido">
+
+
+<h2>
+Taller de Desarrollo de Aplicaciones I
+</h2>
+
+
+
+<p class="descripcion">
+
+Explora las 2 unidades del curso, cada una con 4 semanas de contenido.
+
+</p>
+
+
+
+
+
+<div class="unidades">
+
+
+
+
+
+<div class="unidad">
+
+
+<h3>
+Unidad I
+</h3>
+
+
+<p>
+Fundamentos del desarrollo de aplicaciones
+</p>
+
+
+
+<div class="semanas">
+
+
+<div class="semana">
+
+<h4>
+Semana 1
+</h4>
+
+<span>
+Introducción al desarrollo de aplicaciones
+</span>
+
+</div>
+
+
+
+
+<div class="semana">
+
+<h4>
+Semana 2
+</h4>
+
+<span>
+Conceptos básicos de programación
+</span>
+
+</div>
+
+
+
+
+<div class="semana">
+
+<h4>
+Semana 3
+</h4>
+
+<span>
+Estructuras y lógica de programación
+</span>
+
+</div>
+
+
+
+
+<div class="semana">
+
+<h4>
+Semana 4
+</h4>
+
+<span>
+Diseño y organización de proyectos
+</span>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="unidad">
+
+
+<h3>
+Unidad II
+</h3>
+
+
+<p>
+Desarrollo de aplicaciones y proyectos
+</p>
+
+
+
+<div class="semanas">
+
+
+<div class="semana">
+
+<h4>
+Semana 5
+</h4>
+
+<span>
+Programación aplicada
+</span>
+
+</div>
+
+
+
+
+<div class="semana">
+
+<h4>
+Semana 6
+</h4>
+
+<span>
+Interfaces y componentes
+</span>
+
+</div>
+
+
+
+
+<div class="semana">
+
+<h4>
+Semana 7
+</h4>
+
+<span>
+Integración de funcionalidades
+</span>
+
+</div>
+
+
+
+
+<div class="semana">
+
+<h4>
+Semana 8
+</h4>
+
+<span>
+Proyecto final del curso
+</span>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+</body>
+
+
+</html>
