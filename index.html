@@ -1,109 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Portafolio Estudiantil</title>
+<title>Portafolio Académico - Jhonstyn Vega</title>
+
 
 <style>
+
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+    font-family:'Segoe UI', sans-serif;
 }
+
 
 
 body{
 
     min-height:100vh;
-    background:linear-gradient(135deg,#101d65,#4b3fa3);
+
+    background:
+    linear-gradient(135deg,#07185c,#4b3ca7);
 
     color:white;
 
 }
 
 
-/* BARRA SUPERIOR */
+/* HEADER */
 
 header{
 
     width:100%;
+
+    height:90px;
+
     display:flex;
-    justify-content:space-between;
+
     align-items:center;
 
-    padding:25px 60px;
+    justify-content:center;
+
+    position:relative;
 
 }
 
 
-/* LOGO Y TITULO */
+/* LOGO PEQUEÑO */
 
-.logo-area{
+.logo-header{
+
+    position:absolute;
+
+    left:50px;
+
+    top:20px;
 
     display:flex;
+
     align-items:center;
+
     gap:15px;
 
 }
 
 
-.logo-area img{
+
+.logo-header img{
 
     width:45px;
-    height:55px;
-    object-fit:contain;
 
 }
 
 
-.logo-area h1{
+
+.logo-header h1{
 
     font-size:22px;
 
+    letter-spacing:1px;
+
 }
 
 
-.logo-area p{
+.logo-header p{
 
     font-size:13px;
-    line-height:18px;
+
+    opacity:.8;
 
 }
+
 
 
 
 /* MENU */
 
+nav{
+
+    display:flex;
+
+    gap:45px;
+
+}
+
+
+
 nav a{
 
     color:white;
+
     text-decoration:none;
 
-    margin-left:40px;
+    font-size:17px;
 
     font-weight:600;
 
+    transition:.3s;
+
 }
+
 
 
 nav a:hover{
 
-    color:#5ee0ff;
+    color:#6ee7ff;
 
 }
 
 
 
-/* CONTENEDOR CENTRAL */
+/* CONTENIDO CENTRAL */
 
 
-.container{
+.contenedor{
 
-    height:80vh;
+
+    height:calc(100vh - 90px);
 
     display:flex;
 
@@ -111,100 +150,182 @@ nav a:hover{
 
     align-items:center;
 
+
 }
 
 
 
-/* TARJETA */
 
-.card{
+.hero{
 
-    width:520px;
 
-    padding:45px;
+    display:flex;
 
-    background:rgba(255,255,255,0.18);
+    align-items:center;
 
-    border-radius:30px;
+    justify-content:center;
+
+    gap:80px;
+
+    width:90%;
+
+}
+
+
+
+/* TARJETAS CURSOS */
+
+
+.curso{
+
+
+    width:260px;
+
+    padding:35px 25px;
+
+    border-radius:25px;
+
+
+    background:
+
+    rgba(255,255,255,0.15);
+
+
+    backdrop-filter:blur(15px);
+
 
     text-align:center;
 
-    backdrop-filter:blur(10px);
 
-    box-shadow:0 20px 40px rgba(0,0,0,0.25);
+    border:1px solid rgba(255,255,255,.3);
+
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,.25);
+
+
+    transition:.4s;
+
 
 }
+
+
+
+.curso:hover{
+
+    transform:translateY(-15px);
+
+    background:rgba(255,255,255,.25);
+
+}
+
+
+
+.curso h2{
+
+    font-size:20px;
+
+    line-height:1.4;
+
+}
+
+
 
 
 
 /* LOGO GRANDE */
 
-.card img{
 
-    width:150px;
+.logo-central{
 
-    margin-bottom:25px;
+
+    width:420px;
+
+    height:420px;
+
+    object-fit:contain;
+
+
+    filter:
+
+    drop-shadow(0 25px 35px rgba(0,0,0,.5));
+
+
+    animation:flotar 4s infinite ease-in-out;
+
 
 }
 
 
 
-/* TITULO */
 
-.card h2{
+@keyframes flotar{
 
-    font-size:22px;
 
-    margin-bottom:35px;
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
 
 }
 
 
 
-/* CURSOS */
+
+/* RESPONSIVE */
 
 
-.course-box{
+@media(max-width:1000px){
 
-    display:flex;
+
+.hero{
 
     flex-direction:column;
 
-    gap:20px;
+    gap:30px;
 
 }
 
 
+.logo-central{
 
-.course{
-
-    background:rgba(255,255,255,0.20);
-
-    padding:18px;
-
-    border-radius:18px;
-
-    font-size:17px;
-
-    font-weight:600;
-
-    border:1px solid rgba(255,255,255,0.3);
+    width:250px;
 
 }
 
 
+header{
 
-.course span{
+    height:auto;
 
-    display:block;
+}
 
-    font-size:13px;
 
-    margin-top:8px;
+.logo-header{
 
-    font-weight:400;
+    position:relative;
 
-    opacity:0.9;
+    left:auto;
+
+}
+
 
 }
 
@@ -212,35 +333,48 @@ nav a:hover{
 
 </style>
 
+
 </head>
+
 
 
 <body>
 
 
+
 <header>
 
 
-<div class="logo-area">
+<div class="logo-header">
 
-<img src="logo_upla.png">
+
+<img src="logo-upla.png">
+
 
 <div>
 
-<h1>PORTAFOLIO ESTUDIANTIL</h1>
+<h1>
+PORTAFOLIO ESTUDIANTIL
+</h1>
+
 
 <p>
-Taller de Desarrollo de Aplicaciones I<br>
+Taller de Desarrollo de Aplicaciones I
+<br>
 Algoritmos y Estructura de Datos
 </p>
 
-</div>
 
 </div>
+
+
+</div>
+
 
 
 
 <nav>
+
 
 <a href="#">Inicio</a>
 
@@ -248,64 +382,71 @@ Algoritmos y Estructura de Datos
 
 <a href="#">Dashboard</a>
 
+
 </nav>
+
 
 
 </header>
 
 
 
-<section class="container">
 
 
-<div class="card">
+<div class="contenedor">
 
 
-<img src="logo-upla.png">
+<section class="hero">
 
+
+
+<div class="curso">
 
 <h2>
-PORTAFOLIO ACADÉMICO
+
+Taller de Desarrollo<br>
+de Aplicaciones I
+
 </h2>
 
 
-
-<div class="course-box">
-
-
-<div class="course">
-
-Taller de Desarrollo de Aplicaciones I
-
-<span>
-Curso de programación y desarrollo de software
-</span>
-
 </div>
 
 
 
-<div class="course">
 
-Algoritmos y Estructura de Datos
 
-<span>
-Diseño, análisis y solución de problemas computacionales
-</span>
+<img src="logo-upla.png" class="logo-central">
+
+
+
+
+
+<div class="curso">
+
+
+<h2>
+
+Algoritmos<br>
+y Estructura de Datos
+
+</h2>
+
 
 </div>
 
-
-</div>
-
-
-</div>
 
 
 </section>
 
 
 
+</div>
+
+
+
+
 </body>
+
 
 </html>
