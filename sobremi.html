@@ -1,250 +1,481 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre mí - Portafolio Estudiantil</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-      min-height: 100vh;
-      background: linear-gradient(135deg, #10206e, #4d43b5);
-      color: white;
-    }
+<title>Sobre mí - Portafolio Estudiantil</title>
 
-    /* HEADER */
-    header {
-      width: 100%;
-      padding: 18px 30px;
-      position: relative;
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-    }
 
-    .logo-izq {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
+<style>
 
-    .logo-izq img {
-      width: 52px;
-      height: auto;
-      object-fit: contain;
-    }
 
-    .logo-texto h1 {
-      font-size: 24px;
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 2px;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
 
-    .logo-texto p {
-      font-size: 13px;
-      line-height: 1.35;
-      color: #f0f0f0;
-    }
 
-    .menu {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 25px;
-      display: flex;
-      gap: 55px;
-    }
+body{
 
-    .menu a {
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 700;
-      transition: 0.3s;
-    }
+    min-height:100vh;
 
-    .menu a:hover {
-      color: #8ee7ff;
-    }
+    background:
+    linear-gradient(120deg,#101b68,#4a38a8);
 
-    /* CONTENIDO SOBRE MI */
-    .sobre-mi {
-      width: 86%;
-      max-width: 1550px;
-      margin: 35px auto 50px auto;
-      background: rgba(116, 112, 196, 0.78);
-      border-radius: 34px;
-      padding: 38px 42px;
-      display: flex;
-      align-items: center;
-      gap: 55px;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
-    }
+    color:white;
 
-    .foto {
-      flex: 0 0 35%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+}
 
-    .foto img {
-      width: 370px;
-      height: 370px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 10px solid white;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.18);
-    }
 
-    .texto {
-      flex: 1;
-    }
 
-    .texto h2 {
-      font-size: 34px;
-      font-weight: 800;
-      margin-bottom: 18px;
-      line-height: 1.15;
-    }
+/* ================= HEADER ================= */
 
-    .texto h3 {
-      font-size: 24px;
-      color: #82e6ff;
-      margin-bottom: 22px;
-      font-weight: 800;
-    }
 
-    .texto p {
-      font-size: 17px;
-      line-height: 1.85;
-      margin-bottom: 20px;
-      text-align: justify;
-      color: #f8f8ff;
-    }
+header{
 
-    .subtitulo-seccion {
-      font-size: 22px;
-      color: #82e6ff;
-      font-weight: 800;
-      margin-top: 8px;
-      margin-bottom: 8px;
-    }
+    width:100%;
 
-    @media (max-width: 1100px) {
-      .sobre-mi {
-        flex-direction: column;
-        text-align: center;
-      }
+    padding:18px 55px;
 
-      .texto p {
-        text-align: center;
-      }
+    display:flex;
 
-      .menu {
-        position: static;
-        transform: none;
-        margin-left: auto;
-      }
+    align-items:center;
 
-      header {
-        flex-direction: column;
-        gap: 18px;
-      }
-    }
+    position:relative;
 
-    @media (max-width: 700px) {
-      .menu {
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+}
 
-      .foto img {
-        width: 270px;
-        height: 270px;
-      }
 
-      .texto h2 {
-        font-size: 28px;
-      }
 
-      .texto h3 {
-        font-size: 21px;
-      }
+.logo{
 
-      .logo-texto h1 {
-        font-size: 19px;
-      }
+    display:flex;
 
-      .logo-texto p {
-        font-size: 12px;
-      }
-    }
-  </style>
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+
+.logo img{
+
+    width:55px;
+
+}
+
+
+
+.logo h1{
+
+    font-size:24px;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+}
+
+
+
+.logo p{
+
+    font-size:13px;
+
+    line-height:18px;
+
+}
+
+
+
+
+.menu{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:55px;
+
+}
+
+
+
+.menu a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+.menu a:hover{
+
+    color:#61dafb;
+
+}
+
+
+
+/* ================= CONTENIDO ================= */
+
+
+
+.contenedor{
+
+
+    width:82%;
+
+    max-width:1450px;
+
+    margin:70px auto;
+
+
+    background:rgba(120,115,200,0.75);
+
+
+    border-radius:35px;
+
+
+    padding:45px 70px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:80px;
+
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.30);
+
+
+}
+
+
+
+/* FOTO */
+
+
+.foto{
+
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+
+}
+
+
+.foto img{
+
+
+    width:330px;
+
+    height:330px;
+
+
+    border-radius:50%;
+
+
+    object-fit:cover;
+
+
+    border:10px solid white;
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.35);
+
+
+}
+
+
+
+
+/* TEXTO */
+
+
+.texto{
+
+
+    flex:2;
+
+}
+
+
+
+.texto h2{
+
+
+    font-size:38px;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.texto h3{
+
+
+    color:#62d4ff;
+
+
+    font-size:25px;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.texto p{
+
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    text-align:justify;
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.texto .titulo{
+
+
+    color:#63d5ff;
+
+    font-size:25px;
+
+    font-weight:800;
+
+
+}
+
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:900px){
+
+
+header{
+
+    padding:20px;
+
+}
+
+
+
+.menu{
+
+    display:none;
+
+}
+
+
+
+.contenedor{
+
+
+    flex-direction:column;
+
+    padding:35px;
+
+
+}
+
+
+
+.foto img{
+
+
+    width:230px;
+
+    height:230px;
+
+
+}
+
+
+.texto h2{
+
+font-size:30px;
+
+}
+
+
+}
+
+
+</style>
+
+
 </head>
+
+
 <body>
 
-  <header>
-    <div class="logo-izq">
-      <img src="logo_upla.png" alt="Logo UPLA">
-      <div class="logo-texto">
-        <h1>PORTAFOLIO ESTUDIANTIL</h1>
-        <p>Taller de Desarrollo de Aplicaciones I<br>Algoritmos y Estructura de Datos</p>
-      </div>
-    </div>
 
-    <nav class="menu">
-      <a href="index.html">Inicio</a>
-      <a href="sobremi.html">Sobre mí</a>
-      <a href="dashboard.html">Dashboard</a>
-    </nav>
-  </header>
 
-  <section class="sobre-mi">
-    <div class="foto">
-      <img src="perfil.png" alt="Foto de Jhonstyn Yeray Vega Muñoz">
-    </div>
+<header>
 
-    <div class="texto">
-      <h2>Jhonstyn Yeray Vega Muñoz</h2>
-      <h3>Ingeniería de Sistemas y Computación</h3>
 
-      <p>
-        Soy estudiante de Ingeniería de Sistemas y Computación en la Universidad
-        Peruana Los Andes (UPLA), actualmente cursando el IV ciclo de formación
-        profesional.
-      </p>
+<div class="logo">
 
-      <p>
-        Mi formación está orientada al desarrollo de software, programación,
-        análisis de algoritmos y creación de soluciones tecnológicas capaces de
-        resolver problemas reales mediante la ingeniería y la innovación digital.
-      </p>
 
-      <div class="subtitulo-seccion">Formación académica</div>
+<img src="logo-upla.png">
 
-      <p>
-        Durante mi preparación profesional desarrollo conocimientos en desarrollo
-        de aplicaciones, estructuras de datos, bases de datos, tecnologías web y
-        diseño de sistemas informáticos.
-      </p>
 
-      <p>
-        Tengo interés en la transformación digital, la creación de software y el
-        desarrollo de herramientas tecnológicas que generen soluciones eficientes
-        para las organizaciones.
-      </p>
-    </div>
-  </section>
+<div>
+
+
+<h1>PORTAFOLIO ESTUDIANTIL</h1>
+
+
+<p>
+Taller de Desarrollo de Aplicaciones I<br>
+Algoritmos y Estructura de Datos
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+<nav class="menu">
+
+
+<a href="index.html">Inicio</a>
+
+<a href="sobremi.html">Sobre mí</a>
+
+<a href="dashboard.html">Dashboard</a>
+
+
+</nav>
+
+
+
+</header>
+
+
+
+
+
+
+<section class="contenedor">
+
+
+<div class="foto">
+
+
+<img src="perfil.png">
+
+
+</div>
+
+
+
+
+
+<div class="texto">
+
+
+<h2>
+Jhonstyn Yeray Vega Muñoz
+</h2>
+
+
+<h3>
+Ingeniería de Sistemas y Computación
+</h3>
+
+
+
+<p>
+
+Soy estudiante de Ingeniería de Sistemas y Computación en la Universidad Peruana Los Andes (UPLA), actualmente cursando el IV ciclo de formación profesional.
+
+</p>
+
+
+
+<p>
+
+Mi formación está orientada al desarrollo de software, programación, análisis de algoritmos y creación de soluciones tecnológicas capaces de resolver problemas reales mediante la ingeniería y la innovación digital.
+
+</p>
+
+
+
+<h3 class="titulo">
+Formación académica
+</h3>
+
+
+
+<p>
+
+Durante mi preparación profesional desarrollo conocimientos en desarrollo de aplicaciones, estructuras de datos, bases de datos, tecnologías web y diseño de sistemas informáticos.
+
+</p>
+
+
+<p>
+
+Tengo interés en la transformación digital, la creación de software y el desarrollo de herramientas tecnológicas que generen soluciones eficientes para las organizaciones.
+
+</p>
+
+
+
+</div>
+
+
+
+</section>
+
+
 
 </body>
+
 </html>
