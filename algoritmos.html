@@ -33,31 +33,135 @@ body{
 
 
 
-/* CONTENEDOR PRINCIPAL */
+
+/* HEADER */
+
+
+header{
+
+    width:100%;
+
+    padding:18px 55px;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+
+.logo img{
+
+    width:55px;
+
+}
+
+
+
+.logo h1{
+
+    font-size:24px;
+
+    font-weight:800;
+
+}
+
+
+
+.logo p{
+
+    font-size:13px;
+
+    line-height:18px;
+
+}
+
+
+
+
+
+.menu{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:55px;
+
+}
+
+
+
+.menu a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:700;
+
+}
+
+
+
+.menu a:hover{
+
+    color:#61dafb;
+
+}
+
+
+
+
+/* CONTENEDOR */
+
 
 .contenedor{
 
 
-    width:85%;
+    width:90%;
 
-    max-width:1400px;
+    max-width:1500px;
 
     margin:60px auto;
 
 
     background:rgba(255,255,255,.15);
 
+
     backdrop-filter:blur(15px);
 
 
-    border-radius:35px;
+    border-radius:30px;
 
 
-    padding:45px;
+    padding:40px;
 
 
     box-shadow:
-    0 25px 50px rgba(0,0,0,.3);
+
+    0 20px 40px rgba(0,0,0,.25);
 
 
 }
@@ -65,32 +169,32 @@ body{
 
 
 
-h1{
 
+.titulo{
 
-text-align:center;
+    text-align:center;
 
-font-size:38px;
-
-margin-bottom:10px;
-
+    margin-bottom:35px;
 
 }
 
 
 
-.descripcion{
+.titulo h2{
 
-text-align:center;
-
-font-size:17px;
-
-margin-bottom:45px;
-
-opacity:.9;
+    font-size:34px;
 
 }
 
+
+
+.titulo p{
+
+    margin-top:10px;
+
+    font-size:17px;
+
+}
 
 
 
@@ -100,15 +204,47 @@ opacity:.9;
 
 .unidad{
 
+    text-align:center;
 
-background:rgba(255,255,255,.18);
-
-border-radius:25px;
-
-overflow:hidden;
+}
 
 
-border:1px solid rgba(255,255,255,.3);
+
+.unidad h3{
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.unidad span{
+
+    color:#63d5ff;
+
+    font-size:18px;
+
+}
+
+
+
+
+
+/* SEMANAS */
+
+
+.semanas{
+
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+    margin-top:35px;
 
 
 }
@@ -117,188 +253,119 @@ border:1px solid rgba(255,255,255,.3);
 
 
 
-.boton-unidad{
+.card{
 
 
-width:100%;
+    background:rgba(255,255,255,.18);
 
 
-padding:25px 35px;
+    border:1px solid rgba(255,255,255,.3);
 
 
-background:transparent;
+    border-radius:22px;
 
 
-border:none;
+    padding:25px;
 
 
-color:white;
+    text-align:left;
 
 
-display:flex;
-
-
-justify-content:space-between;
-
-
-align-items:center;
-
-
-font-size:25px;
-
-
-font-weight:700;
-
-
-cursor:pointer;
+    transition:.3s;
 
 
 }
 
 
 
+.card:hover{
 
+    transform:translateY(-8px);
 
-.boton-unidad:hover{
-
-
-background:rgba(255,255,255,.15);
-
+    background:rgba(255,255,255,.25);
 
 }
 
 
 
 
+.card h4{
 
-.flecha{
+    font-size:20px;
+
+    margin-bottom:15px;
+
+}
 
 
-font-size:28px;
 
+.card h5{
+
+    font-size:18px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.card p{
+
+    font-size:15px;
+
+    opacity:.9;
+
+    margin-bottom:25px;
 
 }
 
 
 
 
-/* CONTENIDO OCULTO */
+.boton{
 
 
-.contenido{
+    color:white;
 
+    text-decoration:none;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+.boton:hover{
+
+    color:#61dafb;
+
+}
+
+
+
+
+@media(max-width:900px){
+
+
+.menu{
 
 display:none;
 
+}
 
-padding:30px 40px;
 
 
-background:rgba(0,0,0,.10);
+.semanas{
 
+grid-template-columns:1fr;
 
 }
 
 
 
-.contenido h2{
-
-
-font-size:24px;
-
-margin-bottom:15px;
-
-
 }
-
-
-
-.semana{
-
-
-background:rgba(255,255,255,.15);
-
-
-padding:25px;
-
-
-border-radius:20px;
-
-
-}
-
-
-
-.semana h3{
-
-
-font-size:22px;
-
-
-margin-bottom:10px;
-
-
-}
-
-
-
-
-.semana p{
-
-
-font-size:17px;
-
-
-margin-bottom:20px;
-
-
-}
-
-
-
-
-
-.pdf{
-
-
-display:inline-block;
-
-
-padding:12px 30px;
-
-
-border-radius:25px;
-
-
-border:1px solid white;
-
-
-color:white;
-
-
-text-decoration:none;
-
-
-font-weight:bold;
-
-
-transition:.3s;
-
-
-}
-
-
-
-.pdf:hover{
-
-
-background:white;
-
-color:#392c92;
-
-
-}
-
 
 
 
@@ -314,19 +381,84 @@ color:#392c92;
 
 
 
-<section class="contenedor">
+<header>
 
+
+<div class="logo">
+
+
+<img src="logo_upla.png">
+
+
+<div>
 
 <h1>
-Algoritmos y Estructura de Datos
+PORTAFOLIO ESTUDIANTIL
 </h1>
 
 
-<p class="descripcion">
-
-Explora las unidades del curso, contenidos y evidencias de aprendizaje.
-
+<p>
+Taller de Desarrollo de Aplicaciones I
+<br>
+Algoritmos y Estructura de Datos
 </p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<nav class="menu">
+
+
+<a href="index.html">
+Inicio
+</a>
+
+
+<a href="sobremi.html">
+Sobre mí
+</a>
+
+
+<a href="dashboard.html">
+Dashboard
+</a>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+
+
+<section class="contenedor">
+
+
+<div class="titulo">
+
+
+<h2>
+Algoritmos y Estructura de Datos
+</h2>
+
+
+<p>
+Explora las unidades del curso, contenidos y evidencias de aprendizaje.
+</p>
+
+
+</div>
 
 
 
@@ -335,53 +467,49 @@ Explora las unidades del curso, contenidos y evidencias de aprendizaje.
 <div class="unidad">
 
 
-
-<button class="boton-unidad" onclick="abrirUnidad()">
-
-
-Unidad I
-
-<span class="flecha" id="flecha">
-⌄
-</span>
-
-
-</button>
-
-
-
-
-
-<div class="contenido" id="contenido">
-
-
-<h2>
-Conceptos iniciales de algoritmos y estructuras de datos
-</h2>
-
-
-
-<div class="semana">
-
-
 <h3>
-Semana 1
+Unidad I
 </h3>
 
 
-<p>
+<span>
+Conceptos iniciales de algoritmos y estructuras de datos
+</span>
 
+
+
+
+
+<div class="semanas">
+
+
+
+
+
+<div class="card">
+
+
+<h4>
+Semana 1
+</h4>
+
+
+<h5>
 Arreglos Bidimensionales
+</h5>
 
+
+<p>
+Representación y aplicación de arreglos en programas básicos.
 </p>
 
 
 
-<a class="pdf" 
-href="documentos/Trabajo_Semana1.pdf"
-target="_blank">
+<a href="documentos/Trabajo_Semana1.pdf" 
+target="_blank"
+class="boton">
 
-Ver documento PDF →
+Ver contenido →
 
 </a>
 
@@ -391,64 +519,19 @@ Ver documento PDF →
 
 
 
+
+
 </div>
 
 
 
-</div>
 
+</div>
 
 
 
 
 </section>
-
-
-
-
-
-
-
-<script>
-
-
-function abrirUnidad(){
-
-
-let contenido=document.getElementById("contenido");
-
-let flecha=document.getElementById("flecha");
-
-
-
-if(contenido.style.display==="block"){
-
-
-contenido.style.display="none";
-
-
-flecha.innerHTML="⌄";
-
-
-}
-
-else{
-
-
-contenido.style.display="block";
-
-
-flecha.innerHTML="⌃";
-
-
-}
-
-
-}
-
-
-
-</script>
 
 
 
