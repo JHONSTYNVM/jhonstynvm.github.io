@@ -6,26 +6,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sobre mí - Portafolio</title>
+<title>Sobre mí</title>
 
 
 <style>
+
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI', sans-serif;
+font-family:'Segoe UI',sans-serif;
 }
 
 
 body{
 
 min-height:100vh;
-background:linear-gradient(135deg,#111d66,#503bb5);
+background:linear-gradient(135deg,#101d68,#513bb7);
 color:white;
 
 }
+
 
 
 /* MENU */
@@ -34,7 +36,7 @@ header{
 
 display:flex;
 justify-content:center;
-padding:30px;
+padding:35px;
 
 }
 
@@ -51,7 +53,7 @@ font-weight:600;
 
 
 
-/* CONTENIDO */
+/* CONTENEDOR */
 
 .container{
 
@@ -68,14 +70,21 @@ min-height:80vh;
 
 .card{
 
-width:850px;
+width:950px;
+
 background:rgba(255,255,255,0.15);
-backdrop-filter:blur(10px);
-border-radius:25px;
-padding:40px;
+
+backdrop-filter:blur(15px);
+
+border-radius:30px;
+
+padding:45px;
+
 display:flex;
-gap:50px;
-box-shadow:0 20px 40px rgba(0,0,0,.3);
+
+gap:45px;
+
+box-shadow:0 25px 50px rgba(0,0,0,.35);
 
 }
 
@@ -83,70 +92,110 @@ box-shadow:0 20px 40px rgba(0,0,0,.3);
 
 /* FOTO */
 
-.card img{
+.photo{
 
-width:250px;
-height:250px;
+display:flex;
+
+align-items:center;
+
+}
+
+
+.photo img{
+
+width:280px;
+
+height:280px;
+
 object-fit:cover;
+
 border-radius:50%;
-border:5px solid white;
+
+border:6px solid white;
 
 }
 
 
 
-/* TEXTO */
+/* INFORMACION */
+
+
+.info{
+
+flex:1;
+
+}
+
+
 
 .info h1{
 
-font-size:32px;
+font-size:34px;
+
 margin-bottom:15px;
 
 }
 
 
+
 .info h2{
 
+color:#8be7ff;
+
 font-size:22px;
-color:#8ee7ff;
-margin-bottom:20px;
+
+margin-bottom:15px;
 
 }
+
+
+
+.info h3{
+
+margin-top:25px;
+
+margin-bottom:10px;
+
+font-size:21px;
+
+color:#9ee8ff;
+
+}
+
 
 
 .info p{
 
 font-size:17px;
-line-height:1.7;
+
+line-height:1.8;
+
+text-align:justify;
 
 }
 
 
-/* HABILIDADES */
 
-.skills{
+/* LISTA */
 
-margin-top:25px;
+ul{
 
-}
+margin-top:10px;
 
+padding-left:20px;
 
-.skills span{
+font-size:17px;
 
-display:inline-block;
-background:#6c63ff;
-padding:10px 18px;
-border-radius:20px;
-margin:5px;
+line-height:1.8;
 
 }
+
 
 
 </style>
 
 
 </head>
-
 
 
 <body>
@@ -163,10 +212,11 @@ margin:5px;
 
 <a href="#">Dashboard</a>
 
+
 </nav>
 
-</header>
 
+</header>
 
 
 
@@ -176,7 +226,12 @@ margin:5px;
 <div class="card">
 
 
+<div class="photo">
+
 <img src="perfil.png">
+
+
+</div>
 
 
 
@@ -193,44 +248,62 @@ Ingeniería de Sistemas y Computación
 </h2>
 
 
+<p>
+Estudiante de la Universidad Peruana Los Andes,
+actualmente cursando el IV ciclo de Ingeniería de Sistemas y Computación.
+
+Mi formación está orientada al desarrollo de soluciones tecnológicas,
+programación y análisis de sistemas informáticos.
+
+Me interesa la creación de software, la optimización de procesos
+y el desarrollo de herramientas digitales que permitan resolver
+problemas reales mediante la tecnología.
+</p>
+
+
+
+<h3>
+Formación académica
+</h3>
+
 
 <p>
 
-Soy estudiante de Ingeniería de Sistemas y Computación
-en la Universidad Peruana Los Andes.
+Universidad Peruana Los Andes (UPLA)
 
-Me interesa el desarrollo de software,
-la programación y la creación de soluciones
-tecnológicas aplicadas a problemas reales.
+Carrera profesional: Ingeniería de Sistemas y Computación.
 
-Actualmente desarrollo habilidades en programación,
-estructuras de datos, bases de datos y desarrollo web.
+Actualmente fortaleciendo conocimientos en desarrollo de aplicaciones,
+algoritmos, estructuras de datos, bases de datos y tecnologías web.
 
 </p>
 
 
 
-<div class="skills">
 
-<span>Java</span>
+<h3>
+Áreas de interés
+</h3>
 
-<span>HTML</span>
 
-<span>CSS</span>
+<ul>
 
-<span>Base de Datos</span>
+<li>Desarrollo de software</li>
 
-<span>GitHub</span>
+<li>Programación y análisis de algoritmos</li>
 
-<span>Algoritmos</span>
+<li>Bases de datos y gestión de información</li>
+
+<li>Desarrollo web y aplicaciones tecnológicas</li>
+
+<li>Innovación y transformación digital</li>
+
+
+</ul>
+
 
 
 </div>
-
-
-
-</div>
-
 
 
 </div>
@@ -240,6 +313,5 @@ estructuras de datos, bases de datos y desarrollo web.
 
 
 </body>
-
 
 </html>
