@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sobre mí</title>
+<title>Sobre mí - Portafolio Estudiantil</title>
 
 
 <style>
@@ -20,10 +20,13 @@ font-family:'Segoe UI',sans-serif;
 }
 
 
+
 body{
 
 min-height:100vh;
-background:linear-gradient(135deg,#101d68,#513bb7);
+
+background:linear-gradient(120deg,#111d62,#4c3fa5);
+
 color:white;
 
 }
@@ -32,11 +35,17 @@ color:white;
 
 /* MENU */
 
-header{
+nav{
+
+height:90px;
 
 display:flex;
+
 justify-content:center;
-padding:35px;
+
+align-items:center;
+
+gap:70px;
 
 }
 
@@ -44,10 +53,20 @@ padding:35px;
 nav a{
 
 color:white;
+
 text-decoration:none;
-margin:0 35px;
+
 font-size:18px;
+
 font-weight:600;
+
+}
+
+
+
+nav a:hover{
+
+color:#65d9ff;
 
 }
 
@@ -55,36 +74,30 @@ font-weight:600;
 
 /* CONTENEDOR */
 
-.container{
 
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:80vh;
-
-}
+.sobre-container{
 
 
+width:85%;
 
-/* TARJETA */
-
-.card{
-
-width:950px;
+margin:70px auto;
 
 background:rgba(255,255,255,0.15);
 
-backdrop-filter:blur(15px);
+border-radius:35px;
 
-border-radius:30px;
-
-padding:45px;
+padding:60px;
 
 display:flex;
 
-gap:45px;
+align-items:center;
 
-box-shadow:0 25px 50px rgba(0,0,0,.35);
+gap:70px;
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 20px 50px rgba(0,0,0,.3);
+
 
 }
 
@@ -92,104 +105,139 @@ box-shadow:0 25px 50px rgba(0,0,0,.35);
 
 /* FOTO */
 
-.photo{
+
+.foto{
+
+flex:1;
 
 display:flex;
 
-align-items:center;
+justify-content:center;
+
 
 }
 
 
-.photo img{
+.foto img{
 
-width:280px;
 
-height:280px;
+width:380px;
+
+height:380px;
 
 object-fit:cover;
 
 border-radius:50%;
 
-border:6px solid white;
+border:12px solid white;
+
+box-shadow:0 15px 40px rgba(0,0,0,.4);
+
 
 }
 
 
 
-/* INFORMACION */
+/* TEXTO */
 
 
-.info{
+.texto{
 
-flex:1;
+
+flex:1.4;
+
 
 }
 
 
 
-.info h1{
+.texto h1{
 
-font-size:34px;
+
+font-size:42px;
 
 margin-bottom:15px;
 
-}
-
-
-
-.info h2{
-
-color:#8be7ff;
-
-font-size:22px;
-
-margin-bottom:15px;
 
 }
 
 
 
-.info h3{
+.texto h2{
 
-margin-top:25px;
 
-margin-bottom:10px;
+font-size:26px;
 
-font-size:21px;
+color:#66d7ff;
 
-color:#9ee8ff;
+margin-bottom:30px;
+
 
 }
 
 
 
-.info p{
+.texto p{
 
-font-size:17px;
+
+font-size:18px;
 
 line-height:1.8;
 
 text-align:justify;
 
+margin-bottom:20px;
+
+
 }
 
 
 
-/* LISTA */
+.texto h3{
 
-ul{
 
-margin-top:10px;
+font-size:27px;
 
-padding-left:20px;
+color:#67dcff;
 
-font-size:17px;
+margin-top:25px;
 
-line-height:1.8;
 
 }
 
+
+
+/* MOVIL */
+
+
+@media(max-width:900px){
+
+
+.sobre-container{
+
+flex-direction:column;
+
+}
+
+
+
+.texto{
+
+text-align:center;
+
+}
+
+
+
+.texto p{
+
+text-align:center;
+
+}
+
+
+
+}
 
 
 </style>
@@ -198,11 +246,10 @@ line-height:1.8;
 </head>
 
 
+
 <body>
 
 
-
-<header>
 
 <nav>
 
@@ -210,32 +257,27 @@ line-height:1.8;
 
 <a href="sobremi.html">Sobre mí</a>
 
-<a href="#">Dashboard</a>
+<a href="dashboard.html">Dashboard</a>
 
 
 </nav>
 
 
-</header>
+
+
+<section class="sobre-container">
 
 
 
-<section class="container">
+<div class="foto">
 
-
-<div class="card">
-
-
-<div class="photo">
-
-<img src="perfil.png">
-
+<img src="perfil.png" alt="Perfil">
 
 </div>
 
 
 
-<div class="info">
+<div class="texto">
 
 
 <h1>
@@ -243,21 +285,29 @@ Jhonstyn Yeray Vega Muñoz
 </h1>
 
 
+
 <h2>
 Ingeniería de Sistemas y Computación
 </h2>
 
 
+
 <p>
-Estudiante de la Universidad Peruana Los Andes,
-actualmente cursando el IV ciclo de Ingeniería de Sistemas y Computación.
 
-Mi formación está orientada al desarrollo de soluciones tecnológicas,
-programación y análisis de sistemas informáticos.
+Soy estudiante de Ingeniería de Sistemas y Computación
+en la Universidad Peruana Los Andes (UPLA), actualmente
+cursando el IV ciclo de formación profesional.
 
-Me interesa la creación de software, la optimización de procesos
-y el desarrollo de herramientas digitales que permitan resolver
-problemas reales mediante la tecnología.
+</p>
+
+
+<p>
+
+Mi formación está orientada al desarrollo de software,
+programación, análisis de algoritmos y creación de soluciones
+tecnológicas capaces de resolver problemas reales mediante
+la ingeniería y la innovación digital.
+
 </p>
 
 
@@ -267,51 +317,36 @@ Formación académica
 </h3>
 
 
+
 <p>
 
-Universidad Peruana Los Andes (UPLA)
-
-Carrera profesional: Ingeniería de Sistemas y Computación.
-
-Actualmente fortaleciendo conocimientos en desarrollo de aplicaciones,
-algoritmos, estructuras de datos, bases de datos y tecnologías web.
+Durante mi preparación profesional desarrollo conocimientos
+en desarrollo de aplicaciones, estructuras de datos, bases de
+datos, tecnologías web y diseño de sistemas informáticos.
 
 </p>
 
 
 
+<p>
 
-<h3>
-Áreas de interés
-</h3>
+Tengo interés en la transformación digital, la creación de
+software y el desarrollo de herramientas tecnológicas que
+generen soluciones eficientes para las organizaciones.
 
-
-<ul>
-
-<li>Desarrollo de software</li>
-
-<li>Programación y análisis de algoritmos</li>
-
-<li>Bases de datos y gestión de información</li>
-
-<li>Desarrollo web y aplicaciones tecnológicas</li>
-
-<li>Innovación y transformación digital</li>
-
-
-</ul>
+</p>
 
 
 
 </div>
 
-
-</div>
 
 
 </section>
 
 
+
 </body>
+
 
 </html>
