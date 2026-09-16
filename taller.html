@@ -34,7 +34,8 @@ body{
 
 
 
-/* HEADER */
+/* ================= HEADER ================= */
+
 
 header{
 
@@ -92,7 +93,6 @@ header{
 
 
 
-/* MENU */
 
 
 .menu{
@@ -135,22 +135,26 @@ header{
 
 
 
-/* TITULO */
+/* ================= CONTENIDO ================= */
 
 
 .contenido{
 
+
     width:85%;
+
+    max-width:1500px;
 
     margin:50px auto;
 
     text-align:center;
 
+
 }
 
 
 
-h2{
+.contenido h2{
 
     font-size:40px;
 
@@ -160,7 +164,7 @@ h2{
 
 
 
-.descripcion{
+.descripcion-principal{
 
     font-size:18px;
 
@@ -172,19 +176,19 @@ h2{
 
 
 
-/* UNIDADES */
+/* ================= UNIDADES ================= */
+
 
 
 .unidades{
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:repeat(2,1fr);
+    flex-direction:column;
 
     gap:45px;
 
 }
-
 
 
 
@@ -201,6 +205,7 @@ h2{
 
     border:1px solid rgba(255,255,255,.3);
 
+
     box-shadow:
     0 20px 40px rgba(0,0,0,.25);
 
@@ -209,25 +214,17 @@ h2{
 
 
 
-.unidad:hover{
-
-    transform:translateY(-8px);
-
-}
-
-
-
 .unidad h3{
 
-
-    font-size:28px;
+    font-size:30px;
 
     margin-bottom:10px;
 
 }
 
 
-.unidad p{
+
+.unidad > p{
 
     margin-bottom:30px;
 
@@ -239,7 +236,7 @@ h2{
 
 
 
-/* SEMANAS */
+/* ================= SEMANAS ================= */
 
 
 .semanas{
@@ -249,7 +246,7 @@ h2{
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:20px;
+    gap:25px;
 
 
 }
@@ -261,18 +258,41 @@ h2{
 .semana{
 
 
-    background:rgba(255,255,255,.20);
+    background:rgba(255,255,255,.18);
 
-    padding:25px;
+    border-radius:22px;
 
-    border-radius:20px;
+    padding:20px;
 
-    border:1px solid rgba(255,255,255,.3);
+    border:1px solid rgba(255,255,255,.25);
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
 
     text-align:left;
 
 
+    transition:.3s;
+
+
 }
+
+
+
+.semana:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.25);
+
+}
+
+
 
 
 
@@ -281,25 +301,83 @@ h2{
 
     font-size:20px;
 
-    margin-bottom:10px;
+}
+
+
+
+.semana img{
+
+
+    width:100%;
+
+    height:160px;
+
+    object-fit:cover;
+
+    border-radius:15px;
 
 
 }
 
 
 
-.semana span{
+
+
+.semana h5{
+
+
+    font-size:18px;
+
+
+}
+
+
+
+.semana p{
 
 
     font-size:14px;
 
-    opacity:.8;
+    line-height:1.5;
+
+    opacity:.85;
 
 
 }
 
 
 
+
+
+.semana a{
+
+
+    margin-top:10px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+
+}
+
+
+
+.semana a:hover{
+
+
+    color:#61dafb;
+
+
+}
+
+
+
+
+
+/* ================= RESPONSIVE ================= */
 
 
 @media(max-width:900px){
@@ -312,14 +390,25 @@ display:none;
 }
 
 
-.unidades{
+
+.semanas{
 
 grid-template-columns:1fr;
 
 }
 
 
+
+.contenido{
+
+width:90%;
+
 }
+
+
+}
+
+
 
 </style>
 
@@ -328,7 +417,9 @@ grid-template-columns:1fr;
 
 
 
+
 <body>
+
 
 
 
@@ -339,7 +430,9 @@ grid-template-columns:1fr;
 <div class="logo">
 
 
+
 <img src="logo_upla.png">
+
 
 
 <div>
@@ -350,10 +443,13 @@ PORTAFOLIO ESTUDIANTIL
 </h1>
 
 
+
 <p>
+
 Taller de Desarrollo de Aplicaciones I
 <br>
 Algoritmos y Estructura de Datos
+
 </p>
 
 
@@ -396,7 +492,9 @@ Dashboard
 
 
 
+
 <section class="contenido">
+
 
 
 <h2>
@@ -405,7 +503,8 @@ Taller de Desarrollo de Aplicaciones I
 
 
 
-<p class="descripcion">
+
+<p class="descripcion-principal">
 
 Explora las 2 unidades del curso, cada una con 4 semanas de contenido.
 
@@ -415,9 +514,16 @@ Explora las 2 unidades del curso, cada una con 4 semanas de contenido.
 
 
 
+
 <div class="unidades">
 
 
+
+
+
+
+
+<!-- UNIDAD I -->
 
 
 
@@ -438,75 +544,150 @@ Fundamentos del desarrollo de aplicaciones
 <div class="semanas">
 
 
+
 <div class="semana">
+
 
 <h4>
 Semana 1
 </h4>
 
-<span>
+
+<img src="imagenes/taller/unidad1/semana1.png">
+
+
+<h5>
 Introducción al desarrollo de aplicaciones
-</span>
+</h5>
+
+
+<p>
+Conceptos iniciales, herramientas y entorno de trabajo.
+</p>
+
+
+<a href="#">
+Ver contenido →
+</a>
+
 
 </div>
 
 
 
 
+
 <div class="semana">
+
 
 <h4>
 Semana 2
 </h4>
 
-<span>
+
+<img src="imagenes/taller/unidad1/semana2.png">
+
+
+<h5>
 Conceptos básicos de programación
-</span>
+</h5>
+
+
+<p>
+Fundamentos de lógica y construcción de soluciones.
+</p>
+
+
+<a href="#">
+Ver contenido →
+</a>
+
 
 </div>
 
 
 
 
+
+
 <div class="semana">
+
 
 <h4>
 Semana 3
 </h4>
 
-<span>
+
+<img src="imagenes/taller/unidad1/semana3.png">
+
+
+<h5>
 Estructuras y lógica de programación
-</span>
+</h5>
+
+
+<p>
+Análisis de problemas y diseño de algoritmos.
+</p>
+
+
+<a href="#">
+Ver contenido →
+</a>
+
 
 </div>
+
+
 
 
 
 
 <div class="semana">
 
+
 <h4>
 Semana 4
 </h4>
 
-<span>
-Diseño y organización de proyectos
-</span>
+
+<img src="imagenes/taller/unidad1/semana4.png">
+
+
+<h5>
+Organización de proyectos
+</h5>
+
+
+<p>
+Diseño y estructura inicial de aplicaciones.
+</p>
+
+
+<a href="#">
+Ver contenido →
+</a>
+
 
 </div>
 
 
 
-</div>
-
 
 </div>
 
 
+</div>
 
 
 
 
+
+
+
+
+
+<!-- UNIDAD II -->
 
 
 
@@ -519,7 +700,7 @@ Unidad II
 
 
 <p>
-Desarrollo de aplicaciones y proyectos
+Desarrollo de aplicaciones y proyecto integrador
 </p>
 
 
@@ -527,69 +708,144 @@ Desarrollo de aplicaciones y proyectos
 <div class="semanas">
 
 
+
 <div class="semana">
+
 
 <h4>
 Semana 5
 </h4>
 
-<span>
+
+<img src="imagenes/taller/unidad2/semana5.png">
+
+
+<h5>
 Programación aplicada
-</span>
+</h5>
+
+
+<p>
+Implementación de soluciones mediante código.
+</p>
+
+
+<a href="#">
+Ver contenido →
+</a>
+
 
 </div>
 
 
 
 
+
+
 <div class="semana">
+
 
 <h4>
 Semana 6
 </h4>
 
-<span>
+
+<img src="imagenes/taller/unidad2/semana6.png">
+
+
+<h5>
 Interfaces y componentes
-</span>
+</h5>
+
+
+<p>
+Creación de interfaces para aplicaciones.
+</p>
+
+
+<a href="#">
+Ver contenido →
+</a>
+
 
 </div>
 
 
 
 
+
+
 <div class="semana">
+
 
 <h4>
 Semana 7
 </h4>
 
-<span>
+
+<img src="imagenes/taller/unidad2/semana7.png">
+
+
+<h5>
 Integración de funcionalidades
-</span>
+</h5>
+
+
+<p>
+Unificación de módulos y pruebas.
+</p>
+
+
+<a href="#">
+Ver contenido →
+</a>
+
 
 </div>
+
+
 
 
 
 
 <div class="semana">
 
+
 <h4>
 Semana 8
 </h4>
 
-<span>
+
+<img src="imagenes/taller/unidad2/semana8.png">
+
+
+<h5>
 Proyecto final del curso
-</span>
+</h5>
+
+
+<p>
+Desarrollo y presentación de aplicación.
+</p>
+
+
+<a href="#">
+Ver contenido →
+</a>
+
 
 </div>
 
 
 
+
+
 </div>
 
 
 </div>
+
+
 
 
 
@@ -607,6 +863,5 @@ Proyecto final del curso
 
 
 </body>
-
 
 </html>
