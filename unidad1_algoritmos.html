@@ -4,102 +4,55 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Unidad I - Algoritmos</title>
+<title>Unidad I Algoritmos</title>
 
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
-}
-
-
 body{
 
-min-height:100vh;
+margin:0;
 
-background:
-linear-gradient(120deg,#101b68,#4a38a8);
+font-family:'Segoe UI';
+
+background:linear-gradient(120deg,#101b68,#4a38a8);
 
 color:white;
 
 }
 
 
-
 .contenedor{
 
-width:90%;
-
-max-width:1400px;
+width:85%;
 
 margin:50px auto;
 
-}
+background:#ffffff22;
 
-
-
-h1{
-
-text-align:center;
-
-font-size:35px;
-
-margin-bottom:10px;
-
-}
-
-
-.subtitulo{
-
-text-align:center;
-
-margin-bottom:40px;
-
-opacity:.9;
-
-}
-
-
-
-.unidad{
-
-background:rgba(255,255,255,.15);
-
-padding:35px;
+padding:40px;
 
 border-radius:30px;
 
-backdrop-filter:blur(15px);
-
 }
 
 
-
-.titulo-unidad{
+h1,h2{
 
 text-align:center;
 
-font-size:28px;
-
-margin-bottom:30px;
-
 }
 
 
 
-.grid{
+.semanas{
 
 display:grid;
 
 grid-template-columns:repeat(2,1fr);
 
-gap:25px;
+gap:30px;
 
 }
 
@@ -107,55 +60,17 @@ gap:25px;
 
 .card{
 
+background:#ffffff22;
 
-background:rgba(255,255,255,.18);
-
-border:1px solid rgba(255,255,255,.3);
+padding:30px;
 
 border-radius:20px;
 
-padding:25px;
-
-transition:.3s;
-
-
 }
 
 
 
-.card:hover{
-
-transform:translateY(-8px);
-
-background:rgba(255,255,255,.25);
-
-}
-
-
-
-.card h3{
-
-font-size:22px;
-
-margin-bottom:15px;
-
-}
-
-
-
-.card p{
-
-line-height:1.6;
-
-}
-
-
-
-.boton{
-
-display:inline-block;
-
-margin-top:20px;
+a{
 
 color:white;
 
@@ -163,27 +78,12 @@ text-decoration:none;
 
 font-weight:bold;
 
-}
+display:block;
 
-
-
-.boton:hover{
-
-color:#61dafb;
+margin-top:20px;
 
 }
 
-
-
-@media(max-width:900px){
-
-.grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
 
 
 </style>
@@ -195,8 +95,7 @@ grid-template-columns:1fr;
 <body>
 
 
-
-<section class="contenedor">
+<div class="contenedor">
 
 
 <h1>
@@ -204,92 +103,70 @@ Unidad I
 </h1>
 
 
-<p class="subtitulo">
-Conceptos de Algoritmos y Estructuras de Datos
-</p>
-
-
-
-<div class="unidad">
-
-
-
-<h2 class="titulo-unidad">
-Contenido de la Unidad
+<h2>
+Algoritmos y Estructuras de Datos
 </h2>
 
 
-
-<div class="grid">
-
+<div class="semanas">
 
 
 <div class="card">
 
-
-<h3>
+<h2>
 Semana 1
+</h2>
+
+
+<h3>
+Arreglos Bidimensionales
 </h3>
 
 
 <p>
-<strong>Arreglos Bidimensionales</strong>
+Representación y aplicación de arreglos en programas básicos.
 </p>
 
 
-<p>
-Representación de arreglos y aplicaciones básicas utilizando estructuras de datos.
-</p>
-
-
-<a href="#" class="boton">
-Ver trabajo →
+<a href="semana1_algoritmos.html">
+Ver contenido →
 </a>
 
 
 </div>
-
 
 
 
 
 <div class="card">
 
+<h2>
+Semana 2
+</h2>
+
 
 <h3>
-Semana 2
+Arreglos Paralelos y Objetos
 </h3>
 
 
 <p>
-<strong>Arreglos Paralelos y Objetos</strong>
+Uso de arreglos paralelos y estructuras con objetos.
 </p>
 
 
-<p>
-Representación y uso de arreglos paralelos y arreglos de objetos.
-</p>
-
-
-<a href="#" class="boton">
-Ver trabajo →
+<a href="semana2_algoritmos.html">
+Ver contenido →
 </a>
 
 
 </div>
 
 
-
-
 </div>
 
 
-
 </div>
-
-
-</section>
-
 
 
 </body>
