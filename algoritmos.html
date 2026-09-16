@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Algoritmos y Estructura de Datos</title>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+
+
+body{
+
+min-height:100vh;
+
+background:
+linear-gradient(120deg,#101b68,#4a38a8);
+
+color:white;
+
+}
+
+
+
+/* HEADER */
+
+
+header{
+
+width:100%;
+
+padding:18px 55px;
+
+display:flex;
+
+align-items:center;
+
+position:relative;
+
+}
+
+
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+
+
+.logo img{
+
+width:55px;
+
+}
+
+
+
+.logo h1{
+
+font-size:24px;
+
+font-weight:800;
+
+}
+
+
+
+.logo p{
+
+font-size:13px;
+
+line-height:18px;
+
+}
+
+
+
+
+.menu{
+
+position:absolute;
+
+left:50%;
+
+transform:translateX(-50%);
+
+display:flex;
+
+gap:55px;
+
+}
+
+
+
+.menu a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:16px;
+
+font-weight:700;
+
+}
+
+
+
+.menu a:hover{
+
+color:#61dafb;
+
+}
+
+
+
+/* CONTENIDO */
+
+
+.contenedor{
+
+
+width:90%;
+
+max-width:1500px;
+
+margin:60px auto;
+
+
+background:rgba(255,255,255,.15);
+
+
+backdrop-filter:blur(15px);
+
+
+border-radius:30px;
+
+
+padding:40px;
+
+
+box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+
+}
+
+
+
+.titulo{
+
+text-align:center;
+
+margin-bottom:35px;
+
+}
+
+
+
+.titulo h2{
+
+font-size:34px;
+
+}
+
+
+
+.titulo p{
+
+margin-top:10px;
+
+font-size:17px;
+
+}
+
+
+
+
+
+.unidad{
+
+text-align:center;
+
+}
+
+
+
+.unidad h3{
+
+font-size:28px;
+
+margin-bottom:10px;
+
+}
+
+
+
+.unidad span{
+
+color:#63d5ff;
+
+font-size:18px;
+
+}
+
+
+
+
+
+.semanas{
+
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:25px;
+
+margin-top:35px;
+
+}
+
+
+
+
+.card{
+
+
+background:rgba(255,255,255,.18);
+
+
+border:1px solid rgba(255,255,255,.3);
+
+
+border-radius:22px;
+
+
+padding:25px;
+
+
+text-align:left;
+
+
+transition:.3s;
+
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-8px);
+
+background:rgba(255,255,255,.25);
+
+}
+
+
+
+
+.card h4{
+
+font-size:20px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.card h5{
+
+font-size:18px;
+
+margin-bottom:12px;
+
+}
+
+
+
+.card p{
+
+font-size:15px;
+
+opacity:.9;
+
+margin-bottom:25px;
+
+}
+
+
+
+
+.boton{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:700;
+
+}
+
+
+
+.boton:hover{
+
+color:#61dafb;
+
+}
+
+
+
+@media(max-width:900px){
+
+
+.menu{
+
+display:none;
+
+}
+
+
+.semanas{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<header>
+
+
+
+<div class="logo">
+
+
+<img src="logo_upla.png">
+
+
+<div>
+
+
+<h1>
+PORTAFOLIO ESTUDIANTIL
+</h1>
+
+
+<p>
+Taller de Desarrollo de Aplicaciones I
+<br>
+Algoritmos y Estructura de Datos
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<nav class="menu">
+
+
+<a href="index.html">
+Inicio
+</a>
+
+
+<a href="sobremi.html">
+Sobre mí
+</a>
+
+
+<a href="dashboard.html">
+Dashboard
+</a>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+
+<section class="contenedor">
+
+
+
+<div class="titulo">
+
+
+<h2>
+Algoritmos y Estructura de Datos
+</h2>
+
+
+<p>
+Explora las 4 unidades del curso, cada una con 4 semanas de contenido.
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="unidad">
+
+
+<h3>
+Unidad I
+</h3>
+
+
+<span>
+Conceptos de Algoritmos y Estructuras de Datos
+</span>
+
+
+
+
+<div class="semanas">
+
+
+
+
+
+<div class="card">
+
+
+<h4>
+Semana 1
+</h4>
+
+
+<h5>
+Arreglos Bidimensionales
+</h5>
+
+
+<p>
+Representación y aplicación de arreglos en programas básicos.
+</p>
+
+
+<a href="#" class="boton">
+Ver contenido →
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h4>
+Semana 2
+</h4>
+
+
+<h5>
+Arreglos Paralelos y Objetos
+</h5>
+
+
+<p>
+Uso de arreglos paralelos y estructuras con objetos.
+</p>
+
+
+<a href="#" class="boton">
+Ver contenido →
+</a>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+</body>
+
+</html>
