@@ -11,47 +11,69 @@
 
 <style>
 
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
 
 body{
 
-min-height:100vh;
+    min-height:100vh;
 
-background:linear-gradient(120deg,#101b68,#4a38a8);
+    background:
+    linear-gradient(120deg,#101b68,#4a38a8);
 
-color:white;
+    color:white;
 
 }
 
+
+
+/* CONTENEDOR PRINCIPAL */
 
 .contenedor{
 
-width:85%;
-margin:50px auto;
 
-background:rgba(255,255,255,.15);
+    width:85%;
 
-padding:40px;
+    max-width:1400px;
 
-border-radius:30px;
+    margin:60px auto;
 
-backdrop-filter:blur(15px);
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+
+
+    border-radius:35px;
+
+
+    padding:45px;
+
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.3);
+
 
 }
+
 
 
 
 h1{
 
+
 text-align:center;
 
-font-size:36px;
+font-size:38px;
+
+margin-bottom:10px;
+
 
 }
 
@@ -61,79 +83,238 @@ font-size:36px;
 
 text-align:center;
 
-margin:15px 0 40px;
+font-size:17px;
+
+margin-bottom:45px;
+
+opacity:.9;
 
 }
 
 
 
-.unidades{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:30px;
-
-}
 
 
+/* UNIDAD */
 
-.card{
+
+.unidad{
+
 
 background:rgba(255,255,255,.18);
 
-padding:30px;
-
 border-radius:25px;
+
+overflow:hidden;
+
 
 border:1px solid rgba(255,255,255,.3);
 
-}
-
-
-
-.card h2{
-
-margin-bottom:15px;
 
 }
 
 
 
-.boton{
 
-display:inline-block;
 
-margin-top:20px;
+.boton-unidad{
+
+
+width:100%;
+
+
+padding:25px 35px;
+
+
+background:transparent;
+
+
+border:none;
+
 
 color:white;
 
+
+display:flex;
+
+
+justify-content:space-between;
+
+
+align-items:center;
+
+
+font-size:25px;
+
+
+font-weight:700;
+
+
+cursor:pointer;
+
+
+}
+
+
+
+
+
+.boton-unidad:hover{
+
+
+background:rgba(255,255,255,.15);
+
+
+}
+
+
+
+
+
+.flecha{
+
+
+font-size:28px;
+
+
+}
+
+
+
+
+/* CONTENIDO OCULTO */
+
+
+.contenido{
+
+
+display:none;
+
+
+padding:30px 40px;
+
+
+background:rgba(0,0,0,.10);
+
+
+}
+
+
+
+.contenido h2{
+
+
+font-size:24px;
+
+margin-bottom:15px;
+
+
+}
+
+
+
+.semana{
+
+
+background:rgba(255,255,255,.15);
+
+
+padding:25px;
+
+
+border-radius:20px;
+
+
+}
+
+
+
+.semana h3{
+
+
+font-size:22px;
+
+
+margin-bottom:10px;
+
+
+}
+
+
+
+
+.semana p{
+
+
+font-size:17px;
+
+
+margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.pdf{
+
+
+display:inline-block;
+
+
+padding:12px 30px;
+
+
+border-radius:25px;
+
+
+border:1px solid white;
+
+
+color:white;
+
+
 text-decoration:none;
+
 
 font-weight:bold;
 
+
+transition:.3s;
+
+
 }
 
 
 
-.boton:hover{
+.pdf:hover{
 
-color:#61dafb;
+
+background:white;
+
+color:#392c92;
+
 
 }
+
 
 
 
 </style>
 
+
 </head>
+
 
 
 <body>
 
 
-<div class="contenedor">
+
+
+<section class="contenedor">
 
 
 <h1>
@@ -142,62 +323,134 @@ Algoritmos y Estructura de Datos
 
 
 <p class="descripcion">
+
 Explora las unidades del curso, contenidos y evidencias de aprendizaje.
+
 </p>
 
 
 
-<div class="unidades">
+
+
+<div class="unidad">
 
 
 
-<div class="card">
+<button class="boton-unidad" onclick="abrirUnidad()">
 
-<h2>
+
 Unidad I
-</h2>
+
+<span class="flecha" id="flecha">
+⌄
+</span>
 
 
-<p>
-Conceptos iniciales de algoritmos y estructuras de datos.
-</p>
-
-
-<a href="unidad1_algoritmos.html" class="boton">
-Ver unidad →
-</a>
-
-
-</div>
+</button>
 
 
 
-<div class="card">
+
+
+<div class="contenido" id="contenido">
+
 
 <h2>
-Unidad II
+Conceptos iniciales de algoritmos y estructuras de datos
 </h2>
 
 
+
+<div class="semana">
+
+
+<h3>
+Semana 1
+</h3>
+
+
 <p>
-Contenido próximo del curso.
+
+Arreglos Bidimensionales
+
 </p>
 
 
-<a href="#" class="boton">
-Próximamente →
+
+<a class="pdf" 
+href="documentos/Trabajo_Semana1.pdf"
+target="_blank">
+
+Ver documento PDF →
+
 </a>
 
 
+
+</div>
+
+
+
+</div>
+
+
+
 </div>
 
 
 
 
-</div>
+
+</section>
 
 
-</div>
+
+
+
+
+
+<script>
+
+
+function abrirUnidad(){
+
+
+let contenido=document.getElementById("contenido");
+
+let flecha=document.getElementById("flecha");
+
+
+
+if(contenido.style.display==="block"){
+
+
+contenido.style.display="none";
+
+
+flecha.innerHTML="⌄";
+
+
+}
+
+else{
+
+
+contenido.style.display="block";
+
+
+flecha.innerHTML="⌃";
+
+
+}
+
+
+}
+
+
+
+</script>
+
+
 
 
 </body>
