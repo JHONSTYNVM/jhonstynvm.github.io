@@ -1,352 +1,250 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Sobre mí - Portafolio Estudiantil</title>
-
-
-<style>
-
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
-}
-
-
-
-body{
-
-min-height:100vh;
-
-background:linear-gradient(120deg,#111d62,#4c3fa5);
-
-color:white;
-
-}
-
-
-
-/* MENU */
-
-nav{
-
-height:90px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-gap:70px;
-
-}
-
-
-nav a{
-
-color:white;
-
-text-decoration:none;
-
-font-size:18px;
-
-font-weight:600;
-
-}
-
-
-
-nav a:hover{
-
-color:#65d9ff;
-
-}
-
-
-
-/* CONTENEDOR */
-
-
-.sobre-container{
-
-
-width:85%;
-
-margin:70px auto;
-
-background:rgba(255,255,255,0.15);
-
-border-radius:35px;
-
-padding:60px;
-
-display:flex;
-
-align-items:center;
-
-gap:70px;
-
-backdrop-filter:blur(12px);
-
-box-shadow:0 20px 50px rgba(0,0,0,.3);
-
-
-}
-
-
-
-/* FOTO */
-
-
-.foto{
-
-flex:1;
-
-display:flex;
-
-justify-content:center;
-
-
-}
-
-
-.foto img{
-
-
-width:380px;
-
-height:380px;
-
-object-fit:cover;
-
-border-radius:50%;
-
-border:12px solid white;
-
-box-shadow:0 15px 40px rgba(0,0,0,.4);
-
-
-}
-
-
-
-/* TEXTO */
-
-
-.texto{
-
-
-flex:1.4;
-
-
-}
-
-
-
-.texto h1{
-
-
-font-size:42px;
-
-margin-bottom:15px;
-
-
-}
-
-
-
-.texto h2{
-
-
-font-size:26px;
-
-color:#66d7ff;
-
-margin-bottom:30px;
-
-
-}
-
-
-
-.texto p{
-
-
-font-size:18px;
-
-line-height:1.8;
-
-text-align:justify;
-
-margin-bottom:20px;
-
-
-}
-
-
-
-.texto h3{
-
-
-font-size:27px;
-
-color:#67dcff;
-
-margin-top:25px;
-
-
-}
-
-
-
-/* MOVIL */
-
-
-@media(max-width:900px){
-
-
-.sobre-container{
-
-flex-direction:column;
-
-}
-
-
-
-.texto{
-
-text-align:center;
-
-}
-
-
-
-.texto p{
-
-text-align:center;
-
-}
-
-
-
-}
-
-
-</style>
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre mí - Portafolio Estudiantil</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #10206e, #4d43b5);
+      color: white;
+    }
+
+    /* HEADER */
+    header {
+      width: 100%;
+      padding: 18px 30px;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .logo-izq {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .logo-izq img {
+      width: 52px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .logo-texto h1 {
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .logo-texto p {
+      font-size: 13px;
+      line-height: 1.35;
+      color: #f0f0f0;
+    }
+
+    .menu {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 25px;
+      display: flex;
+      gap: 55px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #8ee7ff;
+    }
+
+    /* CONTENIDO SOBRE MI */
+    .sobre-mi {
+      width: 86%;
+      max-width: 1550px;
+      margin: 35px auto 50px auto;
+      background: rgba(116, 112, 196, 0.78);
+      border-radius: 34px;
+      padding: 38px 42px;
+      display: flex;
+      align-items: center;
+      gap: 55px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+    }
+
+    .foto {
+      flex: 0 0 35%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .foto img {
+      width: 370px;
+      height: 370px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 10px solid white;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+    }
+
+    .texto {
+      flex: 1;
+    }
+
+    .texto h2 {
+      font-size: 34px;
+      font-weight: 800;
+      margin-bottom: 18px;
+      line-height: 1.15;
+    }
+
+    .texto h3 {
+      font-size: 24px;
+      color: #82e6ff;
+      margin-bottom: 22px;
+      font-weight: 800;
+    }
+
+    .texto p {
+      font-size: 17px;
+      line-height: 1.85;
+      margin-bottom: 20px;
+      text-align: justify;
+      color: #f8f8ff;
+    }
+
+    .subtitulo-seccion {
+      font-size: 22px;
+      color: #82e6ff;
+      font-weight: 800;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 1100px) {
+      .sobre-mi {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .texto p {
+        text-align: center;
+      }
+
+      .menu {
+        position: static;
+        transform: none;
+        margin-left: auto;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .menu {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .foto img {
+        width: 270px;
+        height: 270px;
+      }
+
+      .texto h2 {
+        font-size: 28px;
+      }
+
+      .texto h3 {
+        font-size: 21px;
+      }
+
+      .logo-texto h1 {
+        font-size: 19px;
+      }
+
+      .logo-texto p {
+        font-size: 12px;
+      }
+    }
+  </style>
 </head>
-
-
-
 <body>
 
+  <header>
+    <div class="logo-izq">
+      <img src="logo_upla.png" alt="Logo UPLA">
+      <div class="logo-texto">
+        <h1>PORTAFOLIO ESTUDIANTIL</h1>
+        <p>Taller de Desarrollo de Aplicaciones I<br>Algoritmos y Estructura de Datos</p>
+      </div>
+    </div>
 
+    <nav class="menu">
+      <a href="index.html">Inicio</a>
+      <a href="sobremi.html">Sobre mí</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+  </header>
 
-<nav>
+  <section class="sobre-mi">
+    <div class="foto">
+      <img src="perfil.png" alt="Foto de Jhonstyn Yeray Vega Muñoz">
+    </div>
 
-<a href="index.html">Inicio</a>
+    <div class="texto">
+      <h2>Jhonstyn Yeray Vega Muñoz</h2>
+      <h3>Ingeniería de Sistemas y Computación</h3>
 
-<a href="sobremi.html">Sobre mí</a>
+      <p>
+        Soy estudiante de Ingeniería de Sistemas y Computación en la Universidad
+        Peruana Los Andes (UPLA), actualmente cursando el IV ciclo de formación
+        profesional.
+      </p>
 
-<a href="dashboard.html">Dashboard</a>
+      <p>
+        Mi formación está orientada al desarrollo de software, programación,
+        análisis de algoritmos y creación de soluciones tecnológicas capaces de
+        resolver problemas reales mediante la ingeniería y la innovación digital.
+      </p>
 
+      <div class="subtitulo-seccion">Formación académica</div>
 
-</nav>
+      <p>
+        Durante mi preparación profesional desarrollo conocimientos en desarrollo
+        de aplicaciones, estructuras de datos, bases de datos, tecnologías web y
+        diseño de sistemas informáticos.
+      </p>
 
-
-
-
-<section class="sobre-container">
-
-
-
-<div class="foto">
-
-<img src="perfil.png" alt="Perfil">
-
-</div>
-
-
-
-<div class="texto">
-
-
-<h1>
-Jhonstyn Yeray Vega Muñoz
-</h1>
-
-
-
-<h2>
-Ingeniería de Sistemas y Computación
-</h2>
-
-
-
-<p>
-
-Soy estudiante de Ingeniería de Sistemas y Computación
-en la Universidad Peruana Los Andes (UPLA), actualmente
-cursando el IV ciclo de formación profesional.
-
-</p>
-
-
-<p>
-
-Mi formación está orientada al desarrollo de software,
-programación, análisis de algoritmos y creación de soluciones
-tecnológicas capaces de resolver problemas reales mediante
-la ingeniería y la innovación digital.
-
-</p>
-
-
-
-<h3>
-Formación académica
-</h3>
-
-
-
-<p>
-
-Durante mi preparación profesional desarrollo conocimientos
-en desarrollo de aplicaciones, estructuras de datos, bases de
-datos, tecnologías web y diseño de sistemas informáticos.
-
-</p>
-
-
-
-<p>
-
-Tengo interés en la transformación digital, la creación de
-software y el desarrollo de herramientas tecnológicas que
-generen soluciones eficientes para las organizaciones.
-
-</p>
-
-
-
-</div>
-
-
-
-</section>
-
-
+      <p>
+        Tengo interés en la transformación digital, la creación de software y el
+        desarrollo de herramientas tecnológicas que generen soluciones eficientes
+        para las organizaciones.
+      </p>
+    </div>
+  </section>
 
 </body>
-
-
 </html>
