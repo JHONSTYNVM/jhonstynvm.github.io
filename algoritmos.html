@@ -203,27 +203,25 @@ header{
 
     display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    align-items:start;
 
     gap:25px;
 
 }
 
-
-
-
-
 .unidad{
 
-    background:
-
-    rgba(255,255,255,.18);
+    background:rgba(255,255,255,.18);
 
     border:1px solid rgba(255,255,255,.3);
 
     border-radius:20px;
 
     overflow:hidden;
+
+    height:max-content;
 
 }
 
@@ -915,36 +913,25 @@ Aún no hay tareas subidas en esta semana.
 
 function mostrar(elemento){
 
+    const unidad = elemento.closest(".unidad");
 
-    let unidad = elemento.parentElement;
+    const contenido = unidad.querySelector(".contenido");
 
-
-    let contenido = unidad.querySelector(".contenido");
+    const flecha = elemento.querySelector("span");
 
 
     contenido.classList.toggle("activo");
 
 
-
-    let flecha = elemento.querySelector("span");
-
-
-
     if(contenido.classList.contains("activo")){
 
-
-        flecha.textContent = "▲";
-
+        flecha.textContent="▲";
 
     }else{
 
-
-        flecha.textContent = "▼";
-
+        flecha.textContent="▼";
 
     }
-
-
 
 }
 
