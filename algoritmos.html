@@ -11,7 +11,6 @@
 
 <style>
 
-
 *{
     margin:0;
     padding:0;
@@ -32,8 +31,107 @@ body{
 }
 
 
+/* ================= HEADER ================= */
 
-/* CONTENEDOR */
+
+header{
+
+    width:100%;
+
+    padding:18px 55px;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+
+.logo img{
+
+    width:55px;
+
+}
+
+
+
+.logo h1{
+
+    font-size:24px;
+
+    font-weight:800;
+
+}
+
+
+
+.logo p{
+
+    font-size:13px;
+
+    line-height:18px;
+
+}
+
+
+
+
+.menu{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:55px;
+
+}
+
+
+
+.menu a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+}
+
+
+
+.menu a:hover{
+
+    color:#63d5ff;
+
+}
+
+
+
+
+
+/* ================= CONTENEDOR ================= */
+
+
 
 .contenedor{
 
@@ -41,24 +139,30 @@ body{
 
     max-width:1500px;
 
-    margin:60px auto;
+    margin:55px auto;
 
-    background:rgba(255,255,255,.15);
+
+    background:
+
+    rgba(255,255,255,.15);
+
 
     backdrop-filter:blur(15px);
 
+
     border-radius:30px;
+
 
     padding:40px;
 
+
     box-shadow:
+
     0 20px 40px rgba(0,0,0,.25);
+
 
 }
 
-
-
-/* TITULO */
 
 
 .titulo{
@@ -71,9 +175,9 @@ body{
 
 
 
-.titulo h1{
+.titulo h2{
 
-    font-size:36px;
+    font-size:35px;
 
 }
 
@@ -91,66 +195,89 @@ body{
 
 
 
-/* UNIDAD */
+/* ================= UNIDADES ================= */
+
+
+.unidades{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+
+
 
 
 .unidad{
 
-    margin-top:25px;
+    background:
+
+    rgba(255,255,255,.18);
+
+    border:1px solid rgba(255,255,255,.3);
+
+    border-radius:20px;
+
+    overflow:hidden;
 
 }
 
 
 
-.boton-unidad{
 
 
-    width:100%;
+.cabecera{
 
-    padding:20px;
+    padding:25px;
 
-    border:none;
+    cursor:pointer;
 
-    border-radius:20px;
+    display:flex;
 
-    background:rgba(255,255,255,.18);
+    justify-content:space-between;
 
-    border:1px solid rgba(255,255,255,.3);
+    align-items:center;
 
-    color:white;
+}
+
+
+
+.cabecera h3{
+
+    font-size:22px;
+
+}
+
+
+
+.cabecera span{
 
     font-size:25px;
 
-    font-weight:800;
-
-    cursor:pointer;
-
-    text-align:left;
-
-    transition:.3s;
-
-
-}
-
-
-
-.boton-unidad:hover{
-
-    background:rgba(255,255,255,.28);
-
 }
 
 
 
 
 
-.contenido-unidad{
+.contenido{
 
 
     display:none;
 
-    margin-top:20px;
+    padding:0 25px 25px;
 
+}
+
+
+
+.contenido.activo{
+
+    display:block;
 
 }
 
@@ -158,46 +285,9 @@ body{
 
 
 
-/* SEMANAS */
+.info{
 
-
-.semana{
-
-
-    background:rgba(255,255,255,.18);
-
-    border:1px solid rgba(255,255,255,.3);
-
-    border-radius:20px;
-
-    padding:20px;
-
-    margin-bottom:15px;
-
-
-}
-
-
-
-.boton-semana{
-
-
-    width:100%;
-
-    background:none;
-
-    border:none;
-
-    color:white;
-
-    font-size:20px;
-
-    font-weight:800;
-
-    text-align:left;
-
-    cursor:pointer;
-
+    margin-bottom:20px;
 
 }
 
@@ -205,74 +295,182 @@ body{
 
 
 
-.detalle{
-
-
-    display:none;
-
-    margin-top:15px;
-
-    padding-top:15px;
-
-    border-top:1px solid rgba(255,255,255,.3);
-
-
-}
-
-
-
-.detalle h3{
-
+.info h4{
 
     font-size:18px;
 
-    margin-bottom:10px;
+    margin-bottom:8px;
 
 }
 
 
 
-.detalle p{
+.info p{
+
+    opacity:.9;
+
+    margin-bottom:12px;
+
+}
 
 
-    font-size:15px;
 
-    margin-bottom:15px;
+
+
+.archivo{
+
+
+    background:rgba(255,255,255,.15);
+
+    border-radius:15px;
+
+    padding:15px;
 
 
 }
 
 
 
-.pdf{
+.botones{
+
+    margin-top:12px;
+
+}
 
 
-    color:white;
+
+.botones a{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:20px;
 
     text-decoration:none;
 
+    color:white;
+
+    border:1px solid white;
+
+    margin-right:10px;
+
     font-weight:700;
 
+}
+
+
+
+.botones a:hover{
+
+    background:white;
+
+    color:#352b91;
 
 }
 
 
 
-.pdf:hover{
+.pendiente{
 
-    color:#61dafb;
+    padding:15px;
+
+    border:1px dashed rgba(255,255,255,.5);
+
+    border-radius:15px;
+
+    opacity:.8;
 
 }
 
 
+
+
+
+@media(max-width:900px){
+
+
+.menu{
+
+display:none;
+
+}
+
+
+.unidades{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
 
 
 </style>
 
+
 </head>
 
 
+
 <body>
+
+
+
+<header>
+
+
+<div class="logo">
+
+
+<img src="logo_upla.png">
+
+
+<div>
+
+<h1>
+PORTAFOLIO ESTUDIANTIL
+</h1>
+
+
+<p>
+Taller de Desarrollo de Aplicaciones I
+<br>
+Algoritmos y Estructura de Datos
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+<nav class="menu">
+
+
+<a href="index.html">
+Inicio
+</a>
+
+
+<a href="sobremi.html">
+Sobre mí
+</a>
+
+
+<a href="dashboard.html">
+Dashboard
+</a>
+
+
+</nav>
+
+
+</header>
+
 
 
 
@@ -280,19 +478,27 @@ body{
 <section class="contenedor">
 
 
+
 <div class="titulo">
 
-<h1>
+
+<h2>
 Algoritmos y Estructura de Datos
-</h1>
+</h2>
 
 
 <p>
-Explora las unidades del curso, contenidos y evidencias de aprendizaje.
+Explora las 4 unidades del curso, contenidos y evidencias de aprendizaje.
 </p>
 
 
 </div>
+
+
+
+
+
+<div class="unidades">
 
 
 
@@ -300,144 +506,153 @@ Explora las unidades del curso, contenidos y evidencias de aprendizaje.
 
 <!-- UNIDAD I -->
 
+
 <div class="unidad">
 
 
-<button class="boton-unidad" onclick="abrir('u1')">
-
-Unidad I ▼
-
-</button>
-
-
-<div class="contenido-unidad" id="u1">
-
-
-
-<div class="semana">
-
-<button class="boton-semana" onclick="abrir('s1')">
-Semana 1 ▼
-</button>
-
-
-<div class="detalle" id="s1">
+<div class="cabecera" onclick="mostrar(this)">
 
 <h3>
-Arreglos Bidimensionales
+Unidad I
 </h3>
+
+<span>
+▼
+</span>
+
+</div>
+
+
+
+<div class="contenido">
+
+
+<div class="info">
+
+
+<h4>
+Semana 1
+</h4>
 
 
 <p>
+Arreglos Bidimensionales
+<br>
 Representación y aplicación de arreglos en programas básicos.
 </p>
 
 
-<a class="pdf" href="documentos/semana1.pdf" target="_blank">
+<div class="archivo">
 
-📄 Ver trabajo PDF →
+📄 Arreglos_Bidimensionales.pdf
 
+
+<div class="botones">
+
+<a href="#">
+Ver
 </a>
 
+<a href="#">
+Descargar
+</a>
 
 </div>
 
+
+</div>
+
+
 </div>
 
 
 
 
 
-<div class="semana">
-
-<button class="boton-semana" onclick="abrir('s2')">
-Semana 2 ▼
-</button>
+<div class="info">
 
 
-<div class="detalle" id="s2">
-
-<h3>
-Arreglos Paralelos y Objetos
-</h3>
+<h4>
+Semana 2
+</h4>
 
 
 <p>
+Arreglos Paralelos y Objetos
+<br>
 Uso de arreglos paralelos y estructuras con objetos.
 </p>
 
 
-<a class="pdf" href="documentos/semana2.pdf" target="_blank">
 
-📄 Ver trabajo PDF →
+<div class="archivo">
 
+📄 Arreglos_Paralelos.pdf
+
+
+<div class="botones">
+
+<a href="#">
+Ver
 </a>
 
 
-</div>
-
-</div>
-
-
-
-
-
-<div class="semana">
-
-<button class="boton-semana" onclick="abrir('s3')">
-Semana 3 ▼
-</button>
-
-<div class="detalle" id="s3">
-
-<h3>
-Contenido de la semana 3
-</h3>
-
-<p>
-Descripción del trabajo realizado.
-</p>
-
-<a class="pdf" href="documentos/semana3.pdf">
-📄 Ver trabajo PDF →
+<a href="#">
+Descargar
 </a>
 
 </div>
 
-</div>
-
-
-
-
-
-<div class="semana">
-
-<button class="boton-semana" onclick="abrir('s4')">
-Semana 4 ▼
-</button>
-
-
-<div class="detalle" id="s4">
-
-<h3>
-Contenido de la semana 4
-</h3>
-
-<p>
-Descripción del trabajo realizado.
-</p>
-
-<a class="pdf" href="documentos/semana4.pdf">
-📄 Ver trabajo PDF →
-</a>
-
-
-</div>
 
 </div>
 
 
 </div>
+
+
+
+
+
+<div class="info">
+
+<h4>
+Semana 3
+</h4>
+
+
+<div class="pendiente">
+
+Aún no hay tareas subidas en esta semana.
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="info">
+
+<h4>
+Semana 4
+</h4>
+
+
+<div class="pendiente">
+
+Aún no hay tareas subidas en esta semana.
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
 
 </div>
 
@@ -449,67 +664,65 @@ Descripción del trabajo realizado.
 
 <!-- UNIDAD II -->
 
+
 <div class="unidad">
 
 
-<button class="boton-unidad" onclick="abrir('u2')">
+<div class="cabecera" onclick="mostrar(this)">
 
-Unidad II ▼
+<h3>
+Unidad II
+</h3>
 
-</button>
-
-
-<div class="contenido-unidad" id="u2">
-
-
-<div class="semana">
-
-<button class="boton-semana" onclick="abrir('s5')">
-Semana 5 ▼
-</button>
-
-
-<div class="detalle" id="s5">
-
-<h3>Contenido semana 5</h3>
-
-<p>Trabajo desarrollado.</p>
-
-<a class="pdf" href="documentos/semana5.pdf">
-📄 Ver trabajo PDF →
-</a>
-
-</div>
+<span>
+▼
+</span>
 
 </div>
 
 
-<div class="semana">
-
-<button class="boton-semana">
-Semana 6 ▼
-</button>
-
-</div>
+<div class="contenido">
 
 
-<div class="semana">
+<div class="pendiente">
 
-<button class="boton-semana">
-Semana 7 ▼
-</button>
+Semana 5<br>
+Aún no hay tareas subidas en esta semana.
 
 </div>
 
 
-<div class="semana">
+<br>
 
-<button class="boton-semana">
-Semana 8 ▼
-</button>
+
+<div class="pendiente">
+
+Semana 6<br>
+Aún no hay tareas subidas en esta semana.
 
 </div>
 
+
+<br>
+
+
+<div class="pendiente">
+
+Semana 7<br>
+Aún no hay tareas subidas en esta semana.
+
+</div>
+
+
+<br>
+
+
+<div class="pendiente">
+
+Semana 8<br>
+Aún no hay tareas subidas en esta semana.
+
+</div>
 
 
 </div>
@@ -528,13 +741,38 @@ Semana 8 ▼
 
 <div class="unidad">
 
-<button class="boton-unidad">
 
-Unidad III ▼
+<div class="cabecera" onclick="mostrar(this)">
 
-</button>
+<h3>
+Unidad III
+</h3>
+
+<span>
+▼
+</span>
 
 </div>
+
+
+<div class="contenido">
+
+
+<div class="pendiente">
+
+Semana 9 - 12<br>
+
+Aún no hay tareas subidas en esta semana.
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
 
 
 
@@ -545,16 +783,41 @@ Unidad III ▼
 
 <div class="unidad">
 
-<button class="boton-unidad">
 
-Unidad IV ▼
+<div class="cabecera" onclick="mostrar(this)">
 
-</button>
+<h3>
+Unidad IV
+</h3>
+
+<span>
+▼
+</span>
+
+</div>
+
+
+<div class="contenido">
+
+
+<div class="pendiente">
+
+Semana 13 - 16<br>
+
+Aún no hay tareas subidas en esta semana.
+
+</div>
 
 
 </div>
 
 
+</div>
+
+
+
+
+</div>
 
 
 </section>
@@ -563,31 +826,21 @@ Unidad IV ▼
 
 
 
-
-
 <script>
 
 
-function abrir(id){
+function mostrar(elemento){
 
 
-let elemento=document.getElementById(id);
+let contenido =
+elemento.nextElementSibling;
 
 
-if(elemento.style.display==="block"){
-
-elemento.style.display="none";
-
-}
-
-else{
-
-elemento.style.display="block";
-
-}
+contenido.classList.toggle("activo");
 
 
 }
+
 
 
 </script>
@@ -595,6 +848,5 @@ elemento.style.display="block";
 
 
 </body>
-
 
 </html>
