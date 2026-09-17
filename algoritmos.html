@@ -13,48 +13,46 @@
 
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
 
 body{
 
-min-height:100vh;
+    min-height:100vh;
 
-background:
-linear-gradient(120deg,#101b68,#4a38a8);
+    background:
+    linear-gradient(120deg,#101b68,#4a38a8);
 
-color:white;
+    color:white;
 
 }
 
 
 
-/* CONTENEDOR PRINCIPAL */
-
+/* CONTENEDOR */
 
 .contenedor{
 
-width:90%;
+    width:90%;
 
-max-width:1500px;
+    max-width:1500px;
 
-margin:60px auto;
+    margin:60px auto;
 
+    background:rgba(255,255,255,.15);
 
-background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
 
-backdrop-filter:blur(15px);
+    border-radius:30px;
 
-border-radius:30px;
+    padding:40px;
 
-padding:40px;
-
-box-shadow:
-0 20px 40px rgba(0,0,0,.25);
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.25);
 
 }
 
@@ -65,35 +63,40 @@ box-shadow:
 
 .titulo{
 
-text-align:center;
+    text-align:center;
 
-margin-bottom:35px;
+    margin-bottom:35px;
 
 }
+
 
 
 .titulo h1{
 
-font-size:36px;
+    font-size:36px;
 
 }
+
 
 
 .titulo p{
 
-margin-top:10px;
+    margin-top:10px;
 
-font-size:17px;
+    font-size:17px;
 
 }
 
 
 
-/* DESPLEGABLE */
 
-.bloque{
 
-margin-top:20px;
+/* UNIDAD */
+
+
+.unidad{
+
+    margin-top:25px;
 
 }
 
@@ -101,29 +104,31 @@ margin-top:20px;
 
 .boton-unidad{
 
-width:100%;
 
-padding:22px;
+    width:100%;
 
-border:none;
+    padding:20px;
 
-border-radius:18px;
+    border:none;
 
-background:rgba(255,255,255,.18);
+    border-radius:20px;
 
-border:1px solid rgba(255,255,255,.3);
+    background:rgba(255,255,255,.18);
 
-color:white;
+    border:1px solid rgba(255,255,255,.3);
 
-font-size:22px;
+    color:white;
 
-font-weight:800;
+    font-size:25px;
 
-text-align:left;
+    font-weight:800;
 
-cursor:pointer;
+    cursor:pointer;
 
-transition:.3s;
+    text-align:left;
+
+    transition:.3s;
+
 
 }
 
@@ -131,26 +136,25 @@ transition:.3s;
 
 .boton-unidad:hover{
 
-background:rgba(255,255,255,.28);
+    background:rgba(255,255,255,.28);
 
 }
 
 
 
 
-.contenido{
 
-display:none;
+.contenido-unidad{
 
-margin-top:15px;
 
-padding:25px;
+    display:none;
 
-background:rgba(255,255,255,.12);
+    margin-top:20px;
 
-border-radius:20px;
 
 }
+
+
 
 
 
@@ -159,13 +163,17 @@ border-radius:20px;
 
 .semana{
 
-background:rgba(255,255,255,.18);
 
-border-radius:18px;
+    background:rgba(255,255,255,.18);
 
-padding:20px;
+    border:1px solid rgba(255,255,255,.3);
 
-margin-bottom:15px;
+    border-radius:20px;
+
+    padding:20px;
+
+    margin-bottom:15px;
+
 
 }
 
@@ -173,25 +181,41 @@ margin-bottom:15px;
 
 .boton-semana{
 
-font-size:20px;
 
-font-weight:700;
+    width:100%;
 
-cursor:pointer;
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:800;
+
+    text-align:left;
+
+    cursor:pointer;
+
 
 }
 
 
 
+
+
 .detalle{
 
-display:none;
 
-margin-top:15px;
+    display:none;
 
-padding-top:15px;
+    margin-top:15px;
 
-border-top:1px solid rgba(255,255,255,.3);
+    padding-top:15px;
+
+    border-top:1px solid rgba(255,255,255,.3);
+
 
 }
 
@@ -199,18 +223,22 @@ border-top:1px solid rgba(255,255,255,.3);
 
 .detalle h3{
 
-font-size:18px;
 
-margin-bottom:10px;
+    font-size:18px;
+
+    margin-bottom:10px;
 
 }
 
 
+
 .detalle p{
 
-font-size:15px;
 
-margin-bottom:15px;
+    font-size:15px;
+
+    margin-bottom:15px;
+
 
 }
 
@@ -218,11 +246,13 @@ margin-bottom:15px;
 
 .pdf{
 
-color:white;
 
-text-decoration:none;
+    color:white;
 
-font-weight:700;
+    text-decoration:none;
+
+    font-weight:700;
+
 
 }
 
@@ -230,21 +260,20 @@ font-weight:700;
 
 .pdf:hover{
 
-color:#63d5ff;
+    color:#61dafb;
 
 }
 
 
 
 
-
 </style>
-
 
 </head>
 
 
 <body>
+
 
 
 
@@ -257,6 +286,7 @@ color:#63d5ff;
 Algoritmos y Estructura de Datos
 </h1>
 
+
 <p>
 Explora las unidades del curso, contenidos y evidencias de aprendizaje.
 </p>
@@ -267,37 +297,31 @@ Explora las unidades del curso, contenidos y evidencias de aprendizaje.
 
 
 
+
 <!-- UNIDAD I -->
 
+<div class="unidad">
 
-<div class="bloque">
 
-
-<button class="boton-unidad" onclick="abrir('unidad1')">
+<button class="boton-unidad" onclick="abrir('u1')">
 
 Unidad I ▼
 
 </button>
 
 
-
-<div class="contenido" id="unidad1">
+<div class="contenido-unidad" id="u1">
 
 
 
 <div class="semana">
 
-
-<div class="boton-semana" onclick="abrir('semana1')">
-
+<button class="boton-semana" onclick="abrir('s1')">
 Semana 1 ▼
-
-</div>
-
+</button>
 
 
-<div class="detalle" id="semana1">
-
+<div class="detalle" id="s1">
 
 <h3>
 Arreglos Bidimensionales
@@ -309,17 +333,14 @@ Representación y aplicación de arreglos en programas básicos.
 </p>
 
 
+<a class="pdf" href="documentos/semana1.pdf" target="_blank">
 
-<a class="pdf" href="documentos/Algoritmos_Semana1.pdf" target="_blank">
-
-📄 Ver contenido PDF →
+📄 Ver trabajo PDF →
 
 </a>
 
 
-
 </div>
-
 
 </div>
 
@@ -329,17 +350,12 @@ Representación y aplicación de arreglos en programas básicos.
 
 <div class="semana">
 
-
-<div class="boton-semana" onclick="abrir('semana2')">
-
+<button class="boton-semana" onclick="abrir('s2')">
 Semana 2 ▼
-
-</div>
-
+</button>
 
 
-<div class="detalle" id="semana2">
-
+<div class="detalle" id="s2">
 
 <h3>
 Arreglos Paralelos y Objetos
@@ -351,23 +367,77 @@ Uso de arreglos paralelos y estructuras con objetos.
 </p>
 
 
-<a class="pdf" href="documentos/Algoritmos_Semana2.pdf" target="_blank">
+<a class="pdf" href="documentos/semana2.pdf" target="_blank">
 
-📄 Ver contenido PDF →
+📄 Ver trabajo PDF →
 
 </a>
 
 
 </div>
 
+</div>
+
+
+
+
+
+<div class="semana">
+
+<button class="boton-semana" onclick="abrir('s3')">
+Semana 3 ▼
+</button>
+
+<div class="detalle" id="s3">
+
+<h3>
+Contenido de la semana 3
+</h3>
+
+<p>
+Descripción del trabajo realizado.
+</p>
+
+<a class="pdf" href="documentos/semana3.pdf">
+📄 Ver trabajo PDF →
+</a>
+
+</div>
 
 </div>
 
 
 
 
+
+<div class="semana">
+
+<button class="boton-semana" onclick="abrir('s4')">
+Semana 4 ▼
+</button>
+
+
+<div class="detalle" id="s4">
+
+<h3>
+Contenido de la semana 4
+</h3>
+
+<p>
+Descripción del trabajo realizado.
+</p>
+
+<a class="pdf" href="documentos/semana4.pdf">
+📄 Ver trabajo PDF →
+</a>
+
+
 </div>
 
+</div>
+
+
+</div>
 
 </div>
 
@@ -379,38 +449,74 @@ Uso de arreglos paralelos y estructuras con objetos.
 
 <!-- UNIDAD II -->
 
+<div class="unidad">
 
-<div class="bloque">
 
-
-<button class="boton-unidad" onclick="abrir('unidad2')">
+<button class="boton-unidad" onclick="abrir('u2')">
 
 Unidad II ▼
 
 </button>
 
 
-<div class="contenido" id="unidad2">
+<div class="contenido-unidad" id="u2">
 
 
 <div class="semana">
 
+<button class="boton-semana" onclick="abrir('s5')">
+Semana 5 ▼
+</button>
 
-<div class="boton-semana">
 
-Contenido próximo
+<div class="detalle" id="s5">
+
+<h3>Contenido semana 5</h3>
+
+<p>Trabajo desarrollado.</p>
+
+<a class="pdf" href="documentos/semana5.pdf">
+📄 Ver trabajo PDF →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="semana">
+
+<button class="boton-semana">
+Semana 6 ▼
+</button>
+
+</div>
+
+
+<div class="semana">
+
+<button class="boton-semana">
+Semana 7 ▼
+</button>
+
+</div>
+
+
+<div class="semana">
+
+<button class="boton-semana">
+Semana 8 ▼
+</button>
+
+</div>
+
+
 
 </div>
 
 
 </div>
 
-
-</div>
-
-
-
-</div>
 
 
 
@@ -420,36 +526,15 @@ Contenido próximo
 <!-- UNIDAD III -->
 
 
-<div class="bloque">
+<div class="unidad">
 
-
-<button class="boton-unidad" onclick="abrir('unidad3')">
+<button class="boton-unidad">
 
 Unidad III ▼
 
 </button>
 
-
-<div class="contenido" id="unidad3">
-
-
-<div class="semana">
-
-<div class="boton-semana">
-
-Contenido próximo
-
 </div>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
 
 
 
@@ -458,35 +543,16 @@ Contenido próximo
 <!-- UNIDAD IV -->
 
 
-<div class="bloque">
+<div class="unidad">
 
-
-<button class="boton-unidad" onclick="abrir('unidad4')">
+<button class="boton-unidad">
 
 Unidad IV ▼
 
 </button>
 
 
-<div class="contenido" id="unidad4">
-
-
-<div class="semana">
-
-<div class="boton-semana">
-
-Contenido próximo
-
 </div>
-
-</div>
-
-
-</div>
-
-
-</div>
-
 
 
 
@@ -524,9 +590,7 @@ elemento.style.display="block";
 }
 
 
-
 </script>
-
 
 
 
