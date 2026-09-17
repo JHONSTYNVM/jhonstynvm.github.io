@@ -33,7 +33,6 @@ body{
 
 /* ================= HEADER ================= */
 
-
 header{
 
     width:100%;
@@ -91,6 +90,7 @@ header{
 
 
 
+
 .menu{
 
     position:absolute;
@@ -132,7 +132,6 @@ header{
 /* ================= CONTENEDOR ================= */
 
 
-
 .contenedor{
 
     width:90%;
@@ -162,6 +161,8 @@ header{
 
 
 }
+
+
 
 
 
@@ -266,7 +267,6 @@ header{
 
 .contenido{
 
-
     display:none;
 
     padding:0 25px 25px;
@@ -319,15 +319,15 @@ header{
 
 .archivo{
 
-
     background:rgba(255,255,255,.15);
 
     border-radius:15px;
 
     padding:15px;
 
-
 }
+
+
 
 
 
@@ -371,6 +371,8 @@ header{
 
 
 
+
+
 .pendiente{
 
     padding:15px;
@@ -389,7 +391,6 @@ header{
 
 @media(max-width:900px){
 
-
 .menu{
 
 display:none;
@@ -402,7 +403,6 @@ display:none;
 grid-template-columns:1fr;
 
 }
-
 
 }
 
@@ -445,6 +445,7 @@ Algoritmos y Estructura de Datos
 
 
 </div>
+
 
 
 
@@ -497,14 +498,11 @@ Explora las 4 unidades del curso, contenidos y evidencias de aprendizaje.
 
 
 
-
 <div class="unidades">
 
 
 
-
-
-<!-- UNIDAD I -->
+<!-- ================= UNIDAD I ================= -->
 
 
 <div class="unidad">
@@ -512,19 +510,23 @@ Explora las 4 unidades del curso, contenidos y evidencias de aprendizaje.
 
 <div class="cabecera" onclick="mostrar(this)">
 
+
 <h3>
 Unidad I
 </h3>
 
+
 <span>
 ▼
 </span>
+
 
 </div>
 
 
 
 <div class="contenido">
+
 
 
 <div class="info">
@@ -544,18 +546,22 @@ Representación y aplicación de arreglos en programas básicos.
 
 <div class="archivo">
 
+
 📄 Arreglos_Bidimensionales.pdf
 
 
 <div class="botones">
 
+
 <a href="#">
 Ver
 </a>
 
+
 <a href="#">
 Descargar
 </a>
+
 
 </div>
 
@@ -587,10 +593,12 @@ Uso de arreglos paralelos y estructuras con objetos.
 
 <div class="archivo">
 
+
 📄 Arreglos_Paralelos.pdf
 
 
 <div class="botones">
+
 
 <a href="#">
 Ver
@@ -600,6 +608,7 @@ Ver
 <a href="#">
 Descargar
 </a>
+
 
 </div>
 
@@ -614,6 +623,7 @@ Descargar
 
 
 <div class="info">
+
 
 <h4>
 Semana 3
@@ -634,6 +644,7 @@ Aún no hay tareas subidas en esta semana.
 
 
 <div class="info">
+
 
 <h4>
 Semana 4
@@ -660,9 +671,7 @@ Aún no hay tareas subidas en esta semana.
 
 
 
-
-
-<!-- UNIDAD II -->
+<!-- ================= UNIDAD II ================= -->
 
 
 <div class="unidad">
@@ -670,15 +679,19 @@ Aún no hay tareas subidas en esta semana.
 
 <div class="cabecera" onclick="mostrar(this)">
 
+
 <h3>
 Unidad II
 </h3>
+
 
 <span>
 ▼
 </span>
 
+
 </div>
+
 
 
 <div class="contenido">
@@ -729,29 +742,30 @@ Aún no hay tareas subidas en esta semana.
 
 
 </div>
+</div>
 
 
+<!-- ================= UNIDAD III ================= -->
 
-
-
-
-
-<!-- UNIDAD III -->
 
 <div class="unidad">
 
 
 <div class="cabecera" onclick="mostrar(this)">
 
+
 <h3>
 Unidad III
 </h3>
+
 
 <span>
 ▼
 </span>
 
+
 </div>
+
 
 
 <div class="contenido">
@@ -764,6 +778,7 @@ Aún no hay tareas subidas en esta semana.
 
 </div>
 
+
 <br>
 
 
@@ -774,6 +789,7 @@ Aún no hay tareas subidas en esta semana.
 
 </div>
 
+
 <br>
 
 
@@ -783,6 +799,7 @@ Semana 11<br>
 Aún no hay tareas subidas en esta semana.
 
 </div>
+
 
 <br>
 
@@ -795,17 +812,24 @@ Aún no hay tareas subidas en esta semana.
 </div>
 
 
-</div>
-
 
 </div>
 
 
-<!-- UNIDAD IV -->
+</div>
+
+
+
+
+
+<!-- ================= UNIDAD IV ================= -->
+
+
 <div class="unidad">
 
 
 <div class="cabecera" onclick="mostrar(this)">
+
 
 <h3>
 Unidad IV
@@ -818,6 +842,7 @@ Unidad IV
 
 
 </div>
+
 
 
 <div class="contenido">
@@ -864,31 +889,62 @@ Aún no hay tareas subidas en esta semana.
 </div>
 
 
+
 </div>
 
 
 </div>
+
+
+
+
+
+</div>
+
 
 </section>
 
+
+
+
+
+
+
 <script>
+
 
 function mostrar(elemento){
 
+
     let unidad = elemento.parentElement;
 
+
     let contenido = unidad.querySelector(".contenido");
+
 
     contenido.classList.toggle("activo");
 
 
+
     let flecha = elemento.querySelector("span");
 
+
+
     if(contenido.classList.contains("activo")){
+
+
         flecha.textContent = "▲";
+
+
     }else{
+
+
         flecha.textContent = "▼";
+
+
     }
+
+
 
 }
 
@@ -897,6 +953,9 @@ function mostrar(elemento){
 
 
 
+
+
 </body>
+
 
 </html>
