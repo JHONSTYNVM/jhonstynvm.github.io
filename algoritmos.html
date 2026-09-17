@@ -738,6 +738,8 @@ Aún no hay tareas subidas en esta semana.
 
 <!-- UNIDAD III -->
 
+<!-- UNIDAD III -->
+
 
 <div class="unidad">
 
@@ -760,8 +762,37 @@ Unidad III
 
 <div class="pendiente">
 
-Semana 9 - 12<br>
+Semana 9<br>
+Aún no hay tareas subidas en esta semana.
 
+</div>
+
+<br>
+
+
+<div class="pendiente">
+
+Semana 10<br>
+Aún no hay tareas subidas en esta semana.
+
+</div>
+
+<br>
+
+
+<div class="pendiente">
+
+Semana 11<br>
+Aún no hay tareas subidas en esta semana.
+
+</div>
+
+<br>
+
+
+<div class="pendiente">
+
+Semana 12<br>
 Aún no hay tareas subidas en esta semana.
 
 </div>
@@ -773,12 +804,18 @@ Aún no hay tareas subidas en esta semana.
 </div>
 
 
-
-
-
-
-
 <!-- UNIDAD IV -->
+
+
+<div class="unidad">
+
+
+<div class="cabecera" onclick="mostrar(this)">
+
+<h3>
+Unidad IV
+
+    <!-- UNIDAD IV -->
 
 
 <div class="unidad">
@@ -802,8 +839,37 @@ Unidad IV
 
 <div class="pendiente">
 
-Semana 13 - 16<br>
+Semana 13<br>
+Aún no hay tareas subidas en esta semana.
 
+</div>
+
+<br>
+
+
+<div class="pendiente">
+
+Semana 14<br>
+Aún no hay tareas subidas en esta semana.
+
+</div>
+
+<br>
+
+
+<div class="pendiente">
+
+Semana 15<br>
+Aún no hay tareas subidas en esta semana.
+
+</div>
+
+<br>
+
+
+<div class="pendiente">
+
+Semana 16<br>
 Aún no hay tareas subidas en esta semana.
 
 </div>
@@ -814,12 +880,6 @@ Aún no hay tareas subidas en esta semana.
 
 </div>
 
-
-
-
-</div>
-
-
 </section>
 
 
@@ -828,19 +888,24 @@ Aún no hay tareas subidas en esta semana.
 
 <script>
 
-
 function mostrar(elemento){
 
+    let unidad = elemento.parentElement;
 
-let contenido =
-elemento.nextElementSibling;
+    let contenido = unidad.querySelector(".contenido");
+
+    contenido.classList.toggle("activo");
 
 
-contenido.classList.toggle("activo");
+    let flecha = elemento.querySelector("span");
 
+    if(contenido.classList.contains("activo")){
+        flecha.textContent = "▲";
+    }else{
+        flecha.textContent = "▼";
+    }
 
 }
-
 
 
 </script>
