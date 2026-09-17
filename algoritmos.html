@@ -13,359 +13,228 @@
 
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
 
 
 body{
 
-    min-height:100vh;
+min-height:100vh;
 
-    background:
-    linear-gradient(120deg,#101b68,#4a38a8);
+background:
+linear-gradient(120deg,#101b68,#4a38a8);
 
-    color:white;
-
-}
-
-
-
-
-/* HEADER */
-
-
-header{
-
-    width:100%;
-
-    padding:18px 55px;
-
-    display:flex;
-
-    align-items:center;
-
-    position:relative;
+color:white;
 
 }
 
 
 
-.logo{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
-}
-
-
-
-.logo img{
-
-    width:55px;
-
-}
-
-
-
-.logo h1{
-
-    font-size:24px;
-
-    font-weight:800;
-
-}
-
-
-
-.logo p{
-
-    font-size:13px;
-
-    line-height:18px;
-
-}
-
-
-
-
-
-.menu{
-
-    position:absolute;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    display:flex;
-
-    gap:55px;
-
-}
-
-
-
-.menu a{
-
-    color:white;
-
-    text-decoration:none;
-
-    font-size:16px;
-
-    font-weight:700;
-
-}
-
-
-
-.menu a:hover{
-
-    color:#61dafb;
-
-}
-
-
-
-
-/* CONTENEDOR */
+/* CONTENEDOR PRINCIPAL */
 
 
 .contenedor{
 
+width:90%;
 
-    width:90%;
+max-width:1500px;
 
-    max-width:1500px;
-
-    margin:60px auto;
-
-
-    background:rgba(255,255,255,.15);
+margin:60px auto;
 
 
-    backdrop-filter:blur(15px);
+background:rgba(255,255,255,.15);
 
+backdrop-filter:blur(15px);
 
-    border-radius:30px;
+border-radius:30px;
 
+padding:40px;
 
-    padding:40px;
-
-
-    box-shadow:
-
-    0 20px 40px rgba(0,0,0,.25);
-
+box-shadow:
+0 20px 40px rgba(0,0,0,.25);
 
 }
 
 
 
+/* TITULO */
 
 
 .titulo{
 
-    text-align:center;
+text-align:center;
 
-    margin-bottom:35px;
-
-}
-
-
-
-.titulo h2{
-
-    font-size:34px;
+margin-bottom:35px;
 
 }
 
+
+.titulo h1{
+
+font-size:36px;
+
+}
 
 
 .titulo p{
 
-    margin-top:10px;
+margin-top:10px;
 
-    font-size:17px;
+font-size:17px;
+
+}
+
+
+
+/* DESPLEGABLE */
+
+.bloque{
+
+margin-top:20px;
+
+}
+
+
+
+.boton-unidad{
+
+width:100%;
+
+padding:22px;
+
+border:none;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.18);
+
+border:1px solid rgba(255,255,255,.3);
+
+color:white;
+
+font-size:22px;
+
+font-weight:800;
+
+text-align:left;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+
+.boton-unidad:hover{
+
+background:rgba(255,255,255,.28);
 
 }
 
 
 
 
-/* UNIDAD */
+.contenido{
 
+display:none;
 
-.unidad{
+margin-top:15px;
 
-    text-align:center;
+padding:25px;
 
-}
+background:rgba(255,255,255,.12);
 
-
-
-.unidad h3{
-
-    font-size:28px;
-
-    margin-bottom:10px;
+border-radius:20px;
 
 }
-
-
-
-.unidad span{
-
-    color:#63d5ff;
-
-    font-size:18px;
-
-}
-
-
 
 
 
 /* SEMANAS */
 
 
-.semanas{
+.semana{
 
+background:rgba(255,255,255,.18);
 
-    display:grid;
+border-radius:18px;
 
-    grid-template-columns:repeat(2,1fr);
+padding:20px;
 
-    gap:25px;
-
-    margin-top:35px;
-
+margin-bottom:15px;
 
 }
 
 
 
+.boton-semana{
 
+font-size:20px;
 
-.card{
+font-weight:700;
 
-
-    background:rgba(255,255,255,.18);
-
-
-    border:1px solid rgba(255,255,255,.3);
-
-
-    border-radius:22px;
-
-
-    padding:25px;
-
-
-    text-align:left;
-
-
-    transition:.3s;
-
+cursor:pointer;
 
 }
 
 
 
-.card:hover{
-
-    transform:translateY(-8px);
-
-    background:rgba(255,255,255,.25);
-
-}
-
-
-
-
-.card h4{
-
-    font-size:20px;
-
-    margin-bottom:15px;
-
-}
-
-
-
-.card h5{
-
-    font-size:18px;
-
-    margin-bottom:12px;
-
-}
-
-
-
-.card p{
-
-    font-size:15px;
-
-    opacity:.9;
-
-    margin-bottom:25px;
-
-}
-
-
-
-
-.boton{
-
-
-    color:white;
-
-    text-decoration:none;
-
-
-    font-weight:700;
-
-
-}
-
-
-
-.boton:hover{
-
-    color:#61dafb;
-
-}
-
-
-
-
-@media(max-width:900px){
-
-
-.menu{
+.detalle{
 
 display:none;
 
-}
+margin-top:15px;
 
+padding-top:15px;
 
-
-.semanas{
-
-grid-template-columns:1fr;
+border-top:1px solid rgba(255,255,255,.3);
 
 }
 
 
 
+.detalle h3{
+
+font-size:18px;
+
+margin-bottom:10px;
+
 }
+
+
+.detalle p{
+
+font-size:15px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.pdf{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:700;
+
+}
+
+
+
+.pdf:hover{
+
+color:#63d5ff;
+
+}
+
+
 
 
 
@@ -375,70 +244,7 @@ grid-template-columns:1fr;
 </head>
 
 
-
 <body>
-
-
-
-
-<header>
-
-
-<div class="logo">
-
-
-<img src="logo_upla.png">
-
-
-<div>
-
-<h1>
-PORTAFOLIO ESTUDIANTIL
-</h1>
-
-
-<p>
-Taller de Desarrollo de Aplicaciones I
-<br>
-Algoritmos y Estructura de Datos
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<nav class="menu">
-
-
-<a href="index.html">
-Inicio
-</a>
-
-
-<a href="sobremi.html">
-Sobre mí
-</a>
-
-
-<a href="dashboard.html">
-Dashboard
-</a>
-
-
-</nav>
-
-
-</header>
-
-
-
-
 
 
 
@@ -447,11 +253,9 @@ Dashboard
 
 <div class="titulo">
 
-
-<h2>
+<h1>
 Algoritmos y Estructura de Datos
-</h2>
-
+</h1>
 
 <p>
 Explora las unidades del curso, contenidos y evidencias de aprendizaje.
@@ -463,40 +267,41 @@ Explora las unidades del curso, contenidos y evidencias de aprendizaje.
 
 
 
+<!-- UNIDAD I -->
 
-<div class="unidad">
+
+<div class="bloque">
+
+
+<button class="boton-unidad" onclick="abrir('unidad1')">
+
+Unidad I ▼
+
+</button>
+
+
+
+<div class="contenido" id="unidad1">
+
+
+
+<div class="semana">
+
+
+<div class="boton-semana" onclick="abrir('semana1')">
+
+Semana 1 ▼
+
+</div>
+
+
+
+<div class="detalle" id="semana1">
 
 
 <h3>
-Unidad I
-</h3>
-
-
-<span>
-Conceptos iniciales de algoritmos y estructuras de datos
-</span>
-
-
-
-
-
-<div class="semanas">
-
-
-
-
-
-<div class="card">
-
-
-<h4>
-Semana 1
-</h4>
-
-
-<h5>
 Arreglos Bidimensionales
-</h5>
+</h3>
 
 
 <p>
@@ -505,11 +310,9 @@ Representación y aplicación de arreglos en programas básicos.
 
 
 
-<a href="documentos/Trabajo_Semana1.pdf" 
-target="_blank"
-class="boton">
+<a class="pdf" href="documentos/Algoritmos_Semana1.pdf" target="_blank">
 
-Ver contenido →
+📄 Ver contenido PDF →
 
 </a>
 
@@ -518,7 +321,44 @@ Ver contenido →
 </div>
 
 
+</div>
 
+
+
+
+
+<div class="semana">
+
+
+<div class="boton-semana" onclick="abrir('semana2')">
+
+Semana 2 ▼
+
+</div>
+
+
+
+<div class="detalle" id="semana2">
+
+
+<h3>
+Arreglos Paralelos y Objetos
+</h3>
+
+
+<p>
+Uso de arreglos paralelos y estructuras con objetos.
+</p>
+
+
+<a class="pdf" href="documentos/Algoritmos_Semana2.pdf" target="_blank">
+
+📄 Ver contenido PDF →
+
+</a>
+
+
+</div>
 
 
 </div>
@@ -527,6 +367,126 @@ Ver contenido →
 
 
 </div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- UNIDAD II -->
+
+
+<div class="bloque">
+
+
+<button class="boton-unidad" onclick="abrir('unidad2')">
+
+Unidad II ▼
+
+</button>
+
+
+<div class="contenido" id="unidad2">
+
+
+<div class="semana">
+
+
+<div class="boton-semana">
+
+Contenido próximo
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- UNIDAD III -->
+
+
+<div class="bloque">
+
+
+<button class="boton-unidad" onclick="abrir('unidad3')">
+
+Unidad III ▼
+
+</button>
+
+
+<div class="contenido" id="unidad3">
+
+
+<div class="semana">
+
+<div class="boton-semana">
+
+Contenido próximo
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- UNIDAD IV -->
+
+
+<div class="bloque">
+
+
+<button class="boton-unidad" onclick="abrir('unidad4')">
+
+Unidad IV ▼
+
+</button>
+
+
+<div class="contenido" id="unidad4">
+
+
+<div class="semana">
+
+<div class="boton-semana">
+
+Contenido próximo
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
 
 
 
@@ -536,6 +496,41 @@ Ver contenido →
 
 
 
+
+
+
+<script>
+
+
+function abrir(id){
+
+
+let elemento=document.getElementById(id);
+
+
+if(elemento.style.display==="block"){
+
+elemento.style.display="none";
+
+}
+
+else{
+
+elemento.style.display="block";
+
+}
+
+
+}
+
+
+
+</script>
+
+
+
+
 </body>
+
 
 </html>
