@@ -31,7 +31,9 @@ body{
 }
 
 
+
 /* ================= HEADER ================= */
+
 
 header{
 
@@ -90,7 +92,6 @@ header{
 
 
 
-
 .menu{
 
     position:absolute;
@@ -128,11 +129,11 @@ header{
 
 
 
-
 /* ================= CONTENEDOR ================= */
 
 
 .contenedor{
+
 
     width:90%;
 
@@ -161,7 +162,6 @@ header{
 
 
 }
-
 
 
 
@@ -195,51 +195,63 @@ header{
 
 
 
-
 /* ================= UNIDADES ================= */
 
 
 .unidades{
 
+
     display:grid;
 
-    grid-template-columns:repeat(2,minmax(0,1fr));
-
-    align-items:start;
+    grid-template-columns:repeat(2, minmax(0,1fr));
 
     gap:25px;
 
+    align-items:start;
+
 }
+
+
 
 .unidad{
 
-    background:rgba(255,255,255,.18);
+
+    background:
+
+    rgba(255,255,255,.18);
+
 
     border:1px solid rgba(255,255,255,.3);
 
+
     border-radius:20px;
+
 
     overflow:hidden;
 
-    height:max-content;
 
 }
-
 
 
 
 
 .cabecera{
 
+
     padding:25px;
+
 
     cursor:pointer;
 
+
     display:flex;
+
 
     justify-content:space-between;
 
+
     align-items:center;
+
 
 }
 
@@ -247,7 +259,9 @@ header{
 
 .cabecera h3{
 
+
     font-size:22px;
+
 
 }
 
@@ -255,19 +269,23 @@ header{
 
 .cabecera span{
 
+
     font-size:25px;
+
 
 }
 
 
 
 
-
 .contenido{
+
 
     display:none;
 
+
     padding:0 25px 25px;
+
 
 }
 
@@ -275,7 +293,9 @@ header{
 
 .contenido.activo{
 
+
     display:block;
+
 
 }
 
@@ -285,19 +305,22 @@ header{
 
 .info{
 
+
     margin-bottom:20px;
+
 
 }
 
 
 
-
-
 .info h4{
+
 
     font-size:18px;
 
+
     margin-bottom:8px;
+
 
 }
 
@@ -305,33 +328,42 @@ header{
 
 .info p{
 
+
     opacity:.9;
+
 
     margin-bottom:12px;
 
-}
 
+}
 
 
 
 
 .archivo{
 
-    background:rgba(255,255,255,.15);
+
+    background:
+
+    rgba(255,255,255,.15);
+
 
     border-radius:15px;
 
+
     padding:15px;
+
 
 }
 
 
 
 
-
 .botones{
 
+
     margin-top:12px;
+
 
 }
 
@@ -339,21 +371,30 @@ header{
 
 .botones a{
 
+
     display:inline-block;
+
 
     padding:8px 18px;
 
+
     border-radius:20px;
+
 
     text-decoration:none;
 
+
     color:white;
+
 
     border:1px solid white;
 
+
     margin-right:10px;
 
+
     font-weight:700;
+
 
 }
 
@@ -361,33 +402,40 @@ header{
 
 .botones a:hover{
 
+
     background:white;
+
 
     color:#352b91;
 
-}
 
+}
 
 
 
 
 .pendiente{
 
+
     padding:15px;
+
 
     border:1px dashed rgba(255,255,255,.5);
 
+
     border-radius:15px;
 
+
     opacity:.8;
+
 
 }
 
 
 
 
-
 @media(max-width:900px){
+
 
 .menu{
 
@@ -396,20 +444,23 @@ display:none;
 }
 
 
+
 .unidades{
+
 
 grid-template-columns:1fr;
 
-}
 
 }
+
+
+}
+
 
 
 </style>
 
-
 </head>
-
 
 
 <body>
@@ -426,6 +477,7 @@ grid-template-columns:1fr;
 
 
 <div>
+
 
 <h1>
 PORTAFOLIO ESTUDIANTIL
@@ -472,10 +524,7 @@ Dashboard
 
 
 
-
-
 <section class="contenedor">
-
 
 
 <div class="titulo">
@@ -495,10 +544,7 @@ Explora las 4 unidades del curso, contenidos y evidencias de aprendizaje.
 
 
 
-
 <div class="unidades">
-
-
 
 <!-- ================= UNIDAD I ================= -->
 
@@ -526,7 +572,6 @@ Unidad I
 <div class="contenido">
 
 
-
 <div class="info">
 
 
@@ -542,10 +587,12 @@ Representación y aplicación de arreglos en programas básicos.
 </p>
 
 
+
 <div class="archivo">
 
 
 📄 Arreglos_Bidimensionales.pdf
+
 
 
 <div class="botones">
@@ -564,10 +611,12 @@ Descargar
 </div>
 
 
+
 </div>
 
 
 </div>
+
 
 
 
@@ -595,6 +644,7 @@ Uso de arreglos paralelos y estructuras con objetos.
 📄 Arreglos_Paralelos.pdf
 
 
+
 <div class="botones">
 
 
@@ -611,10 +661,13 @@ Descargar
 </div>
 
 
+
 </div>
 
 
 </div>
+
+
 
 
 
@@ -628,6 +681,7 @@ Semana 3
 </h4>
 
 
+
 <div class="pendiente">
 
 Aún no hay tareas subidas en esta semana.
@@ -636,6 +690,8 @@ Aún no hay tareas subidas en esta semana.
 
 
 </div>
+
+
 
 
 
@@ -649,6 +705,7 @@ Semana 4
 </h4>
 
 
+
 <div class="pendiente">
 
 Aún no hay tareas subidas en esta semana.
@@ -664,6 +721,8 @@ Aún no hay tareas subidas en esta semana.
 
 
 </div>
+
+
 
 
 
@@ -692,48 +751,101 @@ Unidad II
 
 
 
+
 <div class="contenido">
 
 
+
+<div class="info">
+
+
+<h4>
+Semana 5
+</h4>
+
+
 <div class="pendiente">
 
-Semana 5<br>
 Aún no hay tareas subidas en esta semana.
 
 </div>
 
 
-<br>
+</div>
+
+
+
+
+<div class="info">
+
+
+<h4>
+Semana 6
+</h4>
 
 
 <div class="pendiente">
 
-Semana 6<br>
 Aún no hay tareas subidas en esta semana.
 
 </div>
 
 
-<br>
+</div>
+
+
+
+
+
+<div class="info">
+
+
+<h4>
+Semana 7
+</h4>
 
 
 <div class="pendiente">
 
-Semana 7<br>
 Aún no hay tareas subidas en esta semana.
 
 </div>
 
 
-<br>
+</div>
+
+
+
+
+
+<div class="info">
+
+
+<h4>
+Semana 8
+</h4>
 
 
 <div class="pendiente">
 
-Semana 8<br>
 Aún no hay tareas subidas en esta semana.
 
 </div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
 
 
 <!-- ================= UNIDAD III ================= -->
@@ -759,55 +871,95 @@ Unidad III
 
 
 
+
 <div class="contenido">
 
 
+
+<div class="info">
+
+
+<h4>
+Semana 9
+</h4>
+
+
 <div class="pendiente">
 
-Semana 9<br>
 Aún no hay tareas subidas en esta semana.
 
 </div>
 
 
-<br>
+</div>
+
+
+
+<div class="info">
+
+
+<h4>
+Semana 10
+</h4>
 
 
 <div class="pendiente">
 
-Semana 10<br>
 Aún no hay tareas subidas en esta semana.
 
 </div>
 
 
-<br>
+</div>
+
+
+
+
+<div class="info">
+
+
+<h4>
+Semana 11
+</h4>
 
 
 <div class="pendiente">
 
-Semana 11<br>
 Aún no hay tareas subidas en esta semana.
 
 </div>
 
 
-<br>
+</div>
+
+
+
+
+
+<div class="info">
+
+
+<h4>
+Semana 12
+</h4>
 
 
 <div class="pendiente">
 
-Semana 12<br>
 Aún no hay tareas subidas en esta semana.
 
 </div>
 
 
+</div>
+
+
 
 </div>
 
 
 </div>
+
 
 
 
@@ -836,66 +988,100 @@ Unidad IV
 
 
 
+
 <div class="contenido">
 
 
+
+<div class="info">
+
+
+<h4>
+Semana 13
+</h4>
+
+
 <div class="pendiente">
 
-Semana 13<br>
 Aún no hay tareas subidas en esta semana.
 
 </div>
 
 
-<br>
+</div>
+
+
+
+
+<div class="info">
+
+
+<h4>
+Semana 14
+</h4>
 
 
 <div class="pendiente">
 
-Semana 14<br>
 Aún no hay tareas subidas en esta semana.
 
 </div>
 
 
-<br>
+</div>
+
+
+
+
+
+<div class="info">
+
+
+<h4>
+Semana 15
+</h4>
 
 
 <div class="pendiente">
 
-Semana 15<br>
 Aún no hay tareas subidas en esta semana.
 
 </div>
 
 
-<br>
+</div>
+
+
+
+
+
+<div class="info">
+
+
+<h4>
+Semana 16
+</h4>
 
 
 <div class="pendiente">
 
-Semana 16<br>
 Aún no hay tareas subidas en esta semana.
 
 </div>
 
 
+</div>
+
+
 
 </div>
 
 
 </div>
-
-
-
-
-
 </div>
 
 
 </section>
-
-
 
 
 
@@ -906,39 +1092,61 @@ Aún no hay tareas subidas en esta semana.
 
 function mostrar(elemento){
 
+
     const unidadActual = elemento.closest(".unidad");
 
-    document.querySelectorAll(".unidad").forEach(unidad=>{
+
+    const contenido = unidadActual.querySelector(".contenido");
+
+
+    const flecha = elemento.querySelector("span");
+
+
+
+    // Cerrar las demás unidades
+
+    document.querySelectorAll(".unidad").forEach(unidad => {
+
 
         if(unidad !== unidadActual){
 
+
             unidad.querySelector(".contenido").classList.remove("activo");
 
-            unidad.querySelector("span").textContent="▼";
+
+            unidad.querySelector(".cabecera span").textContent="▼";
+
 
         }
+
 
     });
 
 
 
-    const contenido = unidadActual.querySelector(".contenido");
 
-    const flecha = elemento.querySelector("span");
+    // Abrir o cerrar la unidad seleccionada
 
 
     contenido.classList.toggle("activo");
 
 
+
     if(contenido.classList.contains("activo")){
+
 
         flecha.textContent="▲";
 
+
     }else{
+
 
         flecha.textContent="▼";
 
+
     }
+
+
 
 }
 
