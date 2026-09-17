@@ -736,13 +736,6 @@ Aún no hay tareas subidas en esta semana.
 </div>
 
 
-</div>
-
-
-</div>
-</div>
-
-
 <!-- ================= UNIDAD III ================= -->
 
 
@@ -913,9 +906,23 @@ Aún no hay tareas subidas en esta semana.
 
 function mostrar(elemento){
 
-    const unidad = elemento.closest(".unidad");
+    const unidadActual = elemento.closest(".unidad");
 
-    const contenido = unidad.querySelector(".contenido");
+    document.querySelectorAll(".unidad").forEach(unidad=>{
+
+        if(unidad !== unidadActual){
+
+            unidad.querySelector(".contenido").classList.remove("activo");
+
+            unidad.querySelector("span").textContent="▼";
+
+        }
+
+    });
+
+
+
+    const contenido = unidadActual.querySelector(".contenido");
 
     const flecha = elemento.querySelector("span");
 
