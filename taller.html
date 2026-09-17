@@ -11,13 +11,13 @@
 
 <style>
 
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:'Segoe UI',sans-serif;
 }
+
 
 
 body{
@@ -33,7 +33,7 @@ body{
 
 
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 
 header{
@@ -61,6 +61,7 @@ header{
     gap:15px;
 
 }
+
 
 
 .logo img{
@@ -92,6 +93,7 @@ header{
 
 
 
+
 .menu{
 
     position:absolute;
@@ -114,8 +116,6 @@ header{
 
     text-decoration:none;
 
-    font-size:16px;
-
     font-weight:700;
 
 }
@@ -124,13 +124,15 @@ header{
 
 .menu a:hover{
 
-    color:#61dafb;
+    color:#63d5ff;
 
 }
 
 
 
-/* CONTENIDO */
+
+
+/* ================= CONTENEDOR ================= */
 
 
 .contenedor{
@@ -140,15 +142,19 @@ header{
 
     max-width:1500px;
 
-    margin:60px auto;
+    margin:55px auto;
 
 
-    background:rgba(255,255,255,.15);
+    background:
+
+    rgba(255,255,255,.15);
+
 
     backdrop-filter:blur(15px);
 
 
     border-radius:30px;
+
 
     padding:40px;
 
@@ -159,6 +165,7 @@ header{
 
 
 }
+
 
 
 
@@ -175,9 +182,10 @@ header{
 
 .titulo h2{
 
-    font-size:34px;
+    font-size:35px;
 
 }
+
 
 
 .titulo p{
@@ -191,129 +199,197 @@ header{
 
 
 
-.unidad{
 
-    text-align:center;
-
-}
+/* ================= UNIDADES ================= */
 
 
-
-.unidad h3{
-
-    font-size:28px;
-
-    margin-bottom:10px;
-
-}
-
-
-
-.unidad span{
-
-    color:#63d5ff;
-
-    font-size:18px;
-
-}
-
-
-
-
-.semanas{
+.unidades{
 
 
     display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,minmax(0,1fr));
 
     gap:25px;
 
-    margin-top:35px;
+    align-items:start;
 
 }
 
 
 
+.unidad{
 
 
-.card{
+    background:
 
-
-    background:rgba(255,255,255,.18);
+    rgba(255,255,255,.18);
 
 
     border:1px solid rgba(255,255,255,.3);
 
 
-    border-radius:22px;
+    border-radius:20px;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+.cabecera{
 
 
     padding:25px;
 
 
-    text-align:left;
+    cursor:pointer;
 
 
-    transition:.3s;
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
 
 
 }
 
 
 
-.card:hover{
+.cabecera h3{
 
-    transform:translateY(-8px);
+    font-size:22px;
 
-    background:rgba(255,255,255,.25);
+}
+
+
+
+.cabecera span{
+
+    font-size:25px;
 
 }
 
 
 
 
+.contenido{
 
-.card h4{
 
-    font-size:20px;
+    display:none;
 
-    margin-bottom:15px;
+
+    padding:0 25px 25px;
+
 
 }
 
 
 
-.card h5{
+.contenido.activo{
+
+
+    display:block;
+
+
+}
+
+
+
+
+.info{
+
+
+    margin-bottom:20px;
+
+}
+
+
+
+.info h4{
+
 
     font-size:18px;
 
-    margin-bottom:12px;
+
+    margin-bottom:8px;
+
 
 }
 
 
 
-.card p{
+.info p{
 
-    font-size:15px;
 
     opacity:.9;
 
-    margin-bottom:25px;
+
+    margin-bottom:12px;
+
 
 }
 
 
 
 
+.archivo{
 
-.boton{
+
+    background:
+
+    rgba(255,255,255,.15);
+
+
+    border-radius:15px;
+
+
+    padding:15px;
+
+
+}
+
+
+
+.botones{
+
+
+    margin-top:12px;
+
+
+}
+
+
+
+.botones a{
+
+
+    display:inline-block;
+
+
+    padding:8px 18px;
+
+
+    border-radius:20px;
+
+
+    text-decoration:none;
 
 
     color:white;
 
-    text-decoration:none;
+
+    border:1px solid white;
+
+
+    margin-right:10px;
 
 
     font-weight:700;
@@ -323,10 +399,34 @@ header{
 
 
 
+.botones a:hover{
 
-.boton:hover{
 
-    color:#61dafb;
+    background:white;
+
+
+    color:#352b91;
+
+
+}
+
+
+
+
+.pendiente{
+
+
+    padding:15px;
+
+
+    border:1px dashed rgba(255,255,255,.5);
+
+
+    border-radius:15px;
+
+
+    opacity:.8;
+
 
 }
 
@@ -338,16 +438,20 @@ header{
 
 .menu{
 
-    display:none;
+display:none;
 
 }
 
 
-.semanas{
 
-    grid-template-columns:1fr;
+.unidades{
+
+
+grid-template-columns:1fr;
+
 
 }
+
 
 
 }
@@ -363,9 +467,7 @@ header{
 
 
 
-
 <header>
-
 
 
 <div class="logo">
@@ -375,6 +477,7 @@ header{
 
 
 <div>
+
 
 <h1>
 PORTAFOLIO ESTUDIANTIL
@@ -414,9 +517,7 @@ Dashboard
 </a>
 
 
-
 </nav>
-
 
 
 </header>
@@ -438,7 +539,7 @@ Taller de Desarrollo de Aplicaciones I
 
 
 <p>
-Explora las 2 unidades del curso, cada una con 4 semanas de contenido.
+Explora las 2 unidades del curso, contenidos y evidencias de aprendizaje.
 </p>
 
 
@@ -447,8 +548,14 @@ Explora las 2 unidades del curso, cada una con 4 semanas de contenido.
 
 
 
+<div class="unidades">
+<!-- ================= UNIDAD I ================= -->
+
 
 <div class="unidad">
+
+
+<div class="cabecera" onclick="mostrar(this)">
 
 
 <h3>
@@ -457,17 +564,19 @@ Unidad I
 
 
 <span>
-Fundamentos del Desarrollo de Aplicaciones
+▼
 </span>
 
 
-
-
-<div class="semanas">
+</div>
 
 
 
-<div class="card">
+<div class="contenido">
+
+
+
+<div class="info">
 
 
 <h4>
@@ -475,19 +584,39 @@ Semana 1
 </h4>
 
 
-<h5>
-Diseño de aplicaciones web básicas
-</h5>
-
-
 <p>
+Diseño de aplicaciones web básicas
+<br>
 Desarrollo de interfaces y soluciones web.
 </p>
 
 
-<a href="#" class="boton">
-Ver contenido →
+
+<div class="archivo">
+
+
+📄 Semana_1_Taller.pdf
+
+
+
+<div class="botones">
+
+
+<a href="#">
+Ver
 </a>
+
+
+<a href="#">
+Descargar
+</a>
+
+
+</div>
+
+
+
+</div>
 
 
 </div>
@@ -497,7 +626,8 @@ Ver contenido →
 
 
 
-<div class="card">
+
+<div class="info">
 
 
 <h4>
@@ -505,18 +635,31 @@ Semana 2
 </h4>
 
 
-<h5>
-Estructura y organización del proyecto
-</h5>
-
-
 <p>
+Estructura y organización del proyecto
+<br>
 Organización de archivos y componentes.
 </p>
 
 
-<a href="#" class="boton">
-Ver contenido →
+
+<div class="archivo">
+
+
+📄 Semana_2_Taller.pdf
+
+
+
+<div class="botones">
+
+
+<a href="#">
+Ver
+</a>
+
+
+<a href="#">
+Descargar
 </a>
 
 
@@ -524,6 +667,58 @@ Ver contenido →
 
 
 
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="info">
+
+
+<h4>
+Semana 3
+</h4>
+
+
+
+<div class="pendiente">
+
+Aún no hay tareas subidas en esta semana.
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="info">
+
+
+<h4>
+Semana 4
+</h4>
+
+
+
+<div class="pendiente">
+
+Aún no hay tareas subidas en esta semana.
+
+</div>
+
+
+</div>
+
 
 
 </div>
@@ -532,12 +727,197 @@ Ver contenido →
 </div>
 
 
+
+
+
+
+
+
+<!-- ================= UNIDAD II ================= -->
+
+
+<div class="unidad">
+
+
+<div class="cabecera" onclick="mostrar(this)">
+
+
+
+<h3>
+Unidad II
+</h3>
+
+
+
+<span>
+▼
+</span>
+
+
+
+</div>
+
+
+
+
+<div class="contenido">
+
+
+
+
+
+<div class="info">
+
+
+<h4>
+Semana 5
+</h4>
+
+
+
+<div class="pendiente">
+
+Aún no hay tareas subidas en esta semana.
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="info">
+
+
+<h4>
+Semana 6
+</h4>
+
+
+
+<div class="pendiente">
+
+Aún no hay tareas subidas en esta semana.
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="info">
+
+
+<h4>
+Semana 7
+</h4>
+
+
+
+<div class="pendiente">
+
+Aún no hay tareas subidas en esta semana.
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="info">
+
+
+<h4>
+Semana 8
+</h4>
+
+
+
+<div class="pendiente">
+
+Aún no hay tareas subidas en esta semana.
+
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+<!-- ================= CIERRE DEL CONTENIDO ================= -->
+
+</div>
 
 </section>
 
 
 
 
+<script>
+
+
+function mostrar(elemento){
+
+
+    const unidad = elemento.closest(".unidad");
+
+
+    const contenido = unidad.querySelector(".contenido");
+
+
+    const flecha = elemento.querySelector("span");
+
+
+
+    contenido.classList.toggle("activo");
+
+
+
+    if(contenido.classList.contains("activo")){
+
+
+        flecha.textContent="▲";
+
+
+    }else{
+
+
+        flecha.textContent="▼";
+
+
+    }
+
+
+}
+
+
+
+</script>
+
+
+
+
 </body>
+
 
 </html>
